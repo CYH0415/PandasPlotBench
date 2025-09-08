@@ -1,0 +1,4 @@
+/dataset/*.csv
+.env
+__pycache__/
+out_results/

@@ -1,5 +1,6 @@
 from .openai_engine import OpenAIEngine
 from .together_engine import TogetherEngine
+from .openrouter_engine import OpenRouterEngine
 
 
 def get_model_by_name(
@@ -23,6 +24,9 @@ def get_model_by_name(
     elif model_name.startswith("together/"):
         kwargs.update({"model_name": model_name[len("together/") :]})
         model = TogetherEngine(**kwargs)
+    elif model_name.startswith("openrouter/"):
+        kwargs.update({"model_name": model_name[len("openrouter/") :]})
+        model = OpenRouterEngine(**kwargs)
     else:
         # That import is here temporary to prevent import of cuda-libraries if they are not needed.
         from .vllm_engine import VllmEngine

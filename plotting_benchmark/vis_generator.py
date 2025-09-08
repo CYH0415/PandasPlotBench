@@ -219,7 +219,7 @@ class VisGenerator:
         self,
         dataset: pd.DataFrame,
     ) -> pd.DataFrame:
-        model_name = dataset["model"].iloc[0].replace("/", "__")
+        model_name = dataset["model"].iloc[0].replace("/", "__").replace(":", "_")
         data_descriptor = dataset["data_descriptor"].iloc[0]
         plot_lib = self.config.plotting_lib.split(" ")[0]
         self.plots_nb_path, _ = add_index_to_filename(
