@@ -185,7 +185,7 @@ class PlottingBenchmark:
         print(20 * "-")
         print(f"Benchmarking {model_name} model")
         print(20 * "-")
-        gen_model_name = "_" + model_name.split("/")[-1]
+        gen_model_name = "_" + model_name.split("/")[-1].replace(":", "_")
         plot_lib = (self.config.plotting_lib).split(" ")[0]
         results_file_spostfix = (
             gen_model_name + "_" + plot_lib + "_" + self.config.data_descriptor

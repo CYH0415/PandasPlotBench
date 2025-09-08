@@ -41,16 +41,44 @@ dataset_folder = Path(paths.dataset_folder)
 results_folder = Path(paths.out_folder)
 temp_folder = results_folder / "temp"
 os.makedirs(temp_folder, exist_ok=True)
-bench_file = results_folder / "benchmark_results_dev.jsonl"
-response_file = results_folder / "gpt_plots_dev1.jsonl"
+# 自动查找最新的结果文件
+bench_files = list(results_folder.glob("benchmark_stat*.jsonl"))
+result_files = list(results_folder.glob("results_*.json"))
 
-bench_scores = read_responses(bench_file)
-plot_responses = read_responses(response_file)
+if not bench_files:
+    raise FileNotFoundError("No benchmark_stat*.jsonl files found in output folder")
+if not result_files:
+    raise FileNotFoundError("No results_*.json files found in output folder")
+
+# 使用最新的文件
+bench_file = sorted(bench_files, key=os.path.getmtime)[-1]
+response_file = sorted(result_files, key=os.path.getmtime)[-1]
+
+print(f"Using benchmark file: {bench_file}")
+print(f"Using results file: {response_file}")
+
+# 读取结果文件（pandas JSON格式）
+import json
+with open(response_file, 'r', encoding='utf-8') as f:
+    plot_data = json.load(f)
+
+# 将pandas JSON格式转换为标准格式
+plot_responses = {}
+if 'id' in plot_data:
+    for i, idx in plot_data['id'].items():
+        entry = {'id': idx}
+        for key, values in plot_data.items():
+            if key != 'id':
+                entry[key] = values[i]
+        plot_responses[idx] = entry
+
+print(f"Found {len(plot_responses)} responses")
+print(f"Sample IDs: {list(plot_responses.keys())[:3]}")
 
 temp_image_file = temp_folder / "plot.png"
 
-# list of strings
-ids = list(bench_scores.keys())
+# 使用结果文件中的ID列表
+ids = list(plot_responses.keys())
 
 doc = Document()
 section = doc.sections[0]
@@ -60,37 +88,37 @@ section.page_height = new_height
 
 for idx in ids:
     response = plot_responses[idx]
-    result = bench_scores[idx]
-
+    
     paragraph = doc.add_paragraph()
     paragraph.alignment = WD_PARAGRAPH_ALIGNMENT.CENTER
     paragraph.add_run(f"ID = {idx}\n")
-    score = result["score"]
-    if isinstance(score, int):
-        score_txt = f"{score:.0f}"
-    else:
-        score_txt = score
-    paragraph.add_run(f"Score = {score_txt}\n")
-    if len(result["error"]) > 0 and not do_random:
-        paragraph.add_run(f'Error = {result["error"]}\n')
+    
+    # 从response中获取分数信息
+    if 'score_vis' in response:
+        vis_score = response['score_vis']
+        paragraph.add_run(f"Vis Score = {vis_score}\n")
+    if 'score_task' in response:
+        task_score = response['score_task']
+        paragraph.add_run(f"Task Score = {task_score}\n")
+    if 'has_plot' in response:
+        has_plot = response['has_plot']
+        paragraph.add_run(f"Has Plot = {has_plot}\n")
 
-    if not do_random:
-        dp_folder = dataset_folder / str(idx)
-    else:
-        if "id_rnd" in result:
-            rnd_idx = result["id_rnd"]
-        else:
-            rnd_idx = idx
+    dp_folder = dataset_folder / str(idx)
 
-        dp_folder = dataset_folder / str(rnd_idx)
-        paragraph.add_run("RANDOM PAIR\n")
-
+    # 查找对应的真实图片
     plot_files = glob.glob(os.path.join(str(dp_folder), "*.png"))
+    
+    if not plot_files:
+        paragraph.add_run(f"Warning: No ground truth image found for ID {idx}\n")
+        doc.add_page_break()
+        continue
+    
     plot_file = plot_files[0]
 
-    if len(plot_files) > 1 and not do_random:
+    if len(plot_files) > 1:
         paragraph.add_run(
-            f"There should be {len(plot_files)} images in GT, used only one\n"
+            f"Note: Found {len(plot_files)} images in GT, using the first one\n"
         )
 
     table = doc.add_table(rows=1, cols=2)
@@ -99,12 +127,17 @@ for idx in ids:
     cell = table.cell(0, 0)
     cell.text = "Generated"
 
-    if len(response["plot results"]["images"]) > 0:
-        decode_image(response["plot results"]["images"][0], temp_image_file)
-
-        paragraph = cell.paragraphs[0]
-        run = paragraph.add_run()
-        run.add_picture(str(temp_image_file), width=Inches(4))
+    # 检查生成的图像
+    if 'plot_b64' in response and response['plot_b64']:
+        try:
+            decode_image(response['plot_b64'], temp_image_file)
+            paragraph = cell.paragraphs[0]
+            run = paragraph.add_run()
+            run.add_picture(str(temp_image_file), width=Inches(4))
+        except Exception as e:
+            cell.text = f"Generated\nError decoding image: {str(e)}"
+    else:
+        cell.text = "Generated\nNo image generated"
 
     cell = table.cell(0, 1)
     cell.text = "Ground truth"
