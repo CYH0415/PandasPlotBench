@@ -8,6 +8,7 @@ from docx import Document
 from docx.enum.text import WD_PARAGRAPH_ALIGNMENT
 from docx.shared import Inches
 from omegaconf import OmegaConf
+from datasets import load_dataset
 
 parent_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 sys.path.append(parent_dir)
@@ -57,6 +58,14 @@ response_file = sorted(result_files, key=os.path.getmtime)[-1]
 print(f"Using benchmark file: {bench_file}")
 print(f"Using results file: {response_file}")
 
+# 加载数据集获取ground truth
+print("Loading dataset for ground truth images...")
+dataset = load_dataset("JetBrains-Research/PandasPlotBench", split="test")
+
+# 创建ID到数据集项的映射
+dataset_dict = {item['id']: item for item in dataset}
+print(f"Loaded {len(dataset_dict)} items from dataset")
+
 # 读取结果文件（pandas JSON格式）
 import json
 with open(response_file, 'r', encoding='utf-8') as f:
@@ -65,17 +74,30 @@ with open(response_file, 'r', encoding='utf-8') as f:
 # 将pandas JSON格式转换为标准格式
 plot_responses = {}
 if 'id' in plot_data:
-    for i, idx in plot_data['id'].items():
-        entry = {'id': idx}
-        for key, values in plot_data.items():
-            if key != 'id':
-                entry[key] = values[i]
-        plot_responses[idx] = entry
+    # plot_data的结构是列式的：{"id": {"0": 157, "1": 54, ...}, "plots_generated": {"0": [...], "1": [...], ...}}
+    id_dict = plot_data['id']
+    
+    for index_key, actual_id in id_dict.items():
+        entry = {'id': actual_id}
+        
+        # 对于每个字段，提取对应index_key的值
+        for field_name, field_values in plot_data.items():
+            if field_name != 'id' and isinstance(field_values, dict):
+                entry[field_name] = field_values.get(index_key, None)
+        
+        plot_responses[actual_id] = entry
 
 print(f"Found {len(plot_responses)} responses")
 print(f"Sample IDs: {list(plot_responses.keys())[:3]}")
 
+# 调试：检查每个响应的plots_generated结构
+for sample_id in list(plot_responses.keys())[:3]:
+    sample_response = plot_responses[sample_id]
+    pg = sample_response.get('plots_generated', 'missing')
+    print(f"ID {sample_id} plots_generated: {type(pg)} - {str(pg)[:50]}...")
+
 temp_image_file = temp_folder / "plot.png"
+temp_gt_image_file = temp_folder / "gt_plot.png"
 
 # 使用结果文件中的ID列表
 ids = list(plot_responses.keys())
@@ -104,22 +126,26 @@ for idx in ids:
         has_plot = response['has_plot']
         paragraph.add_run(f"Has Plot = {has_plot}\n")
 
-    dp_folder = dataset_folder / str(idx)
-
-    # 查找对应的真实图片
-    plot_files = glob.glob(os.path.join(str(dp_folder), "*.png"))
+    # 从数据集中获取ground truth
+    gt_available = False
+    if idx in dataset_dict:
+        dataset_item = dataset_dict[idx]
+        if 'plots_gt' in dataset_item and dataset_item['plots_gt']:
+            plots_gt_list = dataset_item['plots_gt']
+            if isinstance(plots_gt_list, list) and len(plots_gt_list) > 0:
+                gt_available = True
+                # 使用列表中的第一个图片
+                try:
+                    decode_image(plots_gt_list[0], temp_gt_image_file)
+                    paragraph.add_run("Ground truth loaded from dataset\n")
+                    if len(plots_gt_list) > 1:
+                        paragraph.add_run(f"Note: {len(plots_gt_list)} GT images available, using first one\n")
+                except Exception as e:
+                    paragraph.add_run(f"Error decoding ground truth: {str(e)}\n")
+                    gt_available = False
     
-    if not plot_files:
-        paragraph.add_run(f"Warning: No ground truth image found for ID {idx}\n")
-        doc.add_page_break()
-        continue
-    
-    plot_file = plot_files[0]
-
-    if len(plot_files) > 1:
-        paragraph.add_run(
-            f"Note: Found {len(plot_files)} images in GT, using the first one\n"
-        )
+    if not gt_available:
+        paragraph.add_run(f"Warning: No ground truth found for ID {idx}\n")
 
     table = doc.add_table(rows=1, cols=2)
     table.style = "Table Grid"
@@ -127,23 +153,49 @@ for idx in ids:
     cell = table.cell(0, 0)
     cell.text = "Generated"
 
-    # 检查生成的图像
-    if 'plot_b64' in response and response['plot_b64']:
-        try:
-            decode_image(response['plot_b64'], temp_image_file)
-            paragraph = cell.paragraphs[0]
-            run = paragraph.add_run()
-            run.add_picture(str(temp_image_file), width=Inches(4))
-        except Exception as e:
-            cell.text = f"Generated\nError decoding image: {str(e)}"
+    # 调试：输出当前响应的plots_generated信息
+    print(f"\n=== ID {idx} Debug Info ===")
+    if 'plots_generated' in response:
+        pg = response['plots_generated']
+        print(f"plots_generated type: {type(pg)}")
+        print(f"plots_generated value: {str(pg)[:100]}...")
     else:
-        cell.text = "Generated\nNo image generated"
+        print("No plots_generated in response")
+
+    # 检查生成的图像 - 现在每个条目的plots_generated应该是对应索引的列表
+    if 'plots_generated' in response:
+        plots_generated = response['plots_generated']
+        
+        if isinstance(plots_generated, list) and len(plots_generated) > 0:
+            # plots_generated现在是该ID对应的图片列表
+            image_data = plots_generated[0]  # 取列表中的第一个图片
+            if image_data and isinstance(image_data, str) and len(image_data) > 100:
+                try:
+                    decode_image(image_data, temp_image_file)
+                    paragraph = cell.paragraphs[0]
+                    run = paragraph.add_run()
+                    run.add_picture(str(temp_image_file), width=Inches(4))
+                    print(f"ID {idx}: Successfully loaded image")
+                except Exception as e:
+                    print(f"ID {idx}: Error decoding image: {str(e)}")
+                    cell.text = f"Generated\nError decoding: {str(e)[:50]}"
+            else:
+                cell.text = "Generated\nInvalid image data"
+        elif isinstance(plots_generated, list) and len(plots_generated) == 0:
+            cell.text = "Generated\nNo images (empty list)"
+        else:
+            cell.text = f"Generated\nUnexpected type: {type(plots_generated)}"
+    else:
+        cell.text = "Generated\nNo plots_generated field"
 
     cell = table.cell(0, 1)
     cell.text = "Ground truth"
-    paragraph = cell.paragraphs[0]
-    run = paragraph.add_run()
-    run.add_picture(plot_file, width=Inches(4))
+    if gt_available and temp_gt_image_file.exists():
+        paragraph = cell.paragraphs[0]
+        run = paragraph.add_run()
+        run.add_picture(str(temp_gt_image_file), width=Inches(4))
+    else:
+        cell.text = "Ground truth\nNot available"
 
     doc.add_page_break()
 
