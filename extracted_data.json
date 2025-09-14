@@ -1,0 +1,702 @@
+[
+  {
+    "id": "0",
+    "task__plot_description": " Plot Description: Create two subplots, and in each subplot, present one of the DataFrame's columns as a two-dimensional image. Each 2D image will represent the reshaped data array associated with each column, ensuring that each entry in the array corresponds to a specific pixel intensity in the image. The axes in the graphics should be adjusted such that they have equal heights while still preserving their aspect ratios.",
+    "task__plot_style": " Plot Style Description: Adjust the location of the two axes so that they are of equal height and have their specific aspect ratios maintained. Include annotations or text boxes that explain the layout adjustment, for clarity and convenience in understanding the represented data characteristics. Set stylistic features such as color maps, interpolation methods for smoother visual appearance, and box styles for annotations.",
+    "_task__plot_description_short": "Plot Description: Create two subplots, each displaying one DataFrame column as a 2D image with reshaped data arrays. Ensure equal height axes while preserving aspect ratios.",
+    "_task__plot_description_short_single": "Plot Description: Create two subplots, each displaying a reshaped 2D image of a DataFrame column with equal height axes and preserved aspect ratios."
+  },
+  {
+    "id": "1",
+    "task__plot_description": " Plot Description: The task involves creating a plot with two subplots side by side, each displaying a matrix representation of the 'z' values from the dataframe. Each subplot should show the matrix using different color scaling to represent varying values. Additionally, both plots should include a colorbar: one horizontal on the top right of the first plot, and one vertical on the right side of the second plot.\n",
+    "task__plot_style": " Plot Style Description: For styling, the plots should have colorbars integrated in specific positions relative to the respective plots. The first subplot's colorbar should be at the top and horizontal, while the second's should be on the right side and vertical. The main visualizations should clearly display the gradation in colors corresponding to the interval of 'z' values. Each subplot should maintain appropriate labels or ticks that reflect the value scale for the 'z' column.",
+    "_task__plot_description_short": "Plot Description: Create a plot with two side-by-side subplots displaying matrix representations of 'z' values from the dataframe, each with different color scaling. Include a horizontal colorbar on the top right of the first plot and a vertical colorbar on the right side of the second plot.",
+    "_task__plot_description_short_single": "Plot Description: Create two side-by-side subplots of the 'z' values matrix from the dataframe with different color scales, including a horizontal colorbar on the top right of the first plot and a vertical colorbar on the right side of the second plot."
+  },
+  {
+    "id": "2",
+    "task__plot_description": " Plot Description:\n   - Create two plots using the data from the DataFrame.\n   - Each plot should feature data from the 'Data' column plotted against its index.\n   - The first plot should use fixed sizing for all axes to maintain proportional dimensions regardless of the data or its range.\n   - The second plot should incorporate a combination of fixed and scaled sizing to adjust the plot dynamically based on the data content or frame size.\n",
+    "task__plot_style": " Plot Style Description:\n   - Both plots should display a clean, simple line graph with a blue line to represent the data points.\n   - Axes should be minimal and styled to ensure clarity without excessive details that might clutter the visualization.\n   - The overall aesthetics should prioritize clear visualization of trends over decorative graphics.",
+    "_task__plot_description_short": "Plot Description: Create two plots using the 'Data' column against its index. The first plot should have fixed sizing for all axes, while the second plot should use a combination of fixed and scaled sizing.",
+    "_task__plot_description_short_single": "Plot Description: Create two plots of 'Data' column against index, one with fixed axis sizing and one with a mix of fixed and scaled sizing."
+  },
+  {
+    "id": "3",
+    "task__plot_description": " Plot Description: Create visual plots with a 2x2 grid layout, where the elements of the first two columns of the DataFrame are reshaped into 2x2 matrices and displayed in the respective grids. Each individual plot should share axis settings and maintain an assigned aspect ratio for uniformity.",
+    "task__plot_style": " Plot Style Description: Define appropriate padding between plots for clear visual separation. Ensure that each sub-plot adjusts its aspect ratio dynamically based on its position in the grid to enhance distinctiveness. Maintain consistent axis scales across all plots for a unified look.",
+    "_task__plot_description_short": "Plot Description: Create a 2x2 grid layout where the first two columns of the DataFrame are reshaped into 2x2 matrices and displayed in the grids. Ensure each plot shares axis settings and maintains a uniform aspect ratio.",
+    "_task__plot_description_short_single": "Plot Description: Create a 2x2 grid of plots, each displaying reshaped 2x2 matrices from the first two columns of the DataFrame, with shared axis settings and uniform aspect ratio."
+  },
+  {
+    "id": "4",
+    "task__plot_description": " Plot Description:\nConstruct a figure divided into four subplots arranged in a 2x2 grid. Each subplot should display a line plot of one of the dataframe columns against its index. Overlay a smaller inset plot within each main subplot, focusing on a specific area of the line plot, using a contrasting color to distinguish it from the main plot. Each subplot should have its corresponding column label as the title.\n",
+    "task__plot_style": " Plot Style Description:\nFor the main plots in each subplot, use a consistent color (e.g., blue) and style for the lines. The insets should additionally feature a contrasting color (e.g., red) for the lines but without tick labels to maintain clarity and focus on the data representation. Adjust the layout to ensure that all elements are well-spaced and visually appealing.",
+    "_task__plot_description_short": "Plot Description: Construct a 2x2 grid of subplots, each showing a line plot of a dataframe column against its index, with the column label as the title. Overlay a smaller inset plot within each subplot, focusing on a specific area with a contrasting color.",
+    "_task__plot_description_short_single": "Plot Description: Create a 2x2 grid of subplots with each subplot showing a line plot of a dataframe column against its index, including an inset plot highlighting a specific area in a contrasting color, and title each subplot with the column label."
+  },
+  {
+    "id": "5",
+    "task__plot_description": " Plot Description: Construct a line plot where Distance is plotted along the X-axis, and both Density and Temperature are plotted along two separate Y-axes. Density and Temperature should each be represented by a uniquely colored line, and each axis should contain an appropriate label for its corresponding data variable.\n",
+    "task__plot_style": " Plot Style Description: Fine-tune the appearance of the plot by setting specific colors for the axis labels and legend text to match the colors of the lines they describe, enhancing readability and visual appeal. This customization involves adjusting color properties of labels and legend entries.",
+    "_task__plot_description_short": "Plot Description: Construct a line plot with Distance on the X-axis, and Density and Temperature on separate Y-axes, each represented by uniquely colored lines. Label each axis appropriately for its corresponding data variable.",
+    "_task__plot_description_short_single": "Plot Description: Create a line plot with Distance on the X-axis, Density on the left Y-axis, Temperature on the right Y-axis, each with unique colors and appropriate labels."
+  },
+  {
+    "id": "6",
+    "task__plot_description": " Plot Description: The task requires generating a central scatter plot of the 'x' and 'y' data points to visualize their distribution. Additionally, histogram plots of these variables will be placed adjacent to the scatter plot: one above to show the distribution of 'x' values and another to the right to show the distribution of 'y' values. The histograms and scatter plot should share axis limits to align their scales and provide a cohesive visual analysis.\n",
+    "task__plot_style": " Plot Style Description: The style of the plot should ensure the scatter plot is proportionate and square in shape to maintain scale accuracy between the 'x' and 'y' axes. Histograms need to be aligned such that they directly correspond to their respective axis on the scatter plot, with shared axis settings to ensure a unified view and axis limits. Adjustments to the visibility of tick labels on the histograms will be necessary to maintain a clean and focused display.",
+    "_task__plot_description_short": "Plot Description: Generate a central scatter plot of 'x' and 'y' data points with histograms of 'x' above and 'y' to the right, sharing axis limits. Ensure the plots align scales for cohesive visual analysis.",
+    "_task__plot_description_short_single": "Plot Description: Create a central scatter plot of 'x' vs 'y' with histograms of 'x' above and 'y' to the right, sharing axis limits."
+  },
+  {
+    "id": "7",
+    "task__plot_description": " Plot description: The plot will consist of four individual plot areas arranged in a 2x3 grid based on the proportions specified in a DataFrame. The first row of the DataFrame determines the widths of the plots, and the second row determines the heights. The grids should be dynamically sized based on these values, adjusting even if the DataFrame values change.",
+    "task__plot_style": " Plot style description: The plot should appear as four distinct axes within a single figure window. Each plot will be labelled distinctly and positioned according to a specific layout that uses horizontal and vertical dimensions controlled by the values extracted from the DataFrame. The positioning and sizing of these plots must reflect the proportional values (or fixed sizes) derived from the DataFrame's specified columns.",
+    "_task__plot_description_short": "Plot Description: Create a 2x3 grid of plots where the first row of the DataFrame specifies the widths and the second row specifies the heights, dynamically adjusting to any changes in these values.",
+    "_task__plot_description_short_single": "Plot Description: Create a 2x3 grid of plots with widths and heights dynamically sized according to the first and second rows of the DataFrame, respectively."
+  },
+  {
+    "id": "8",
+    "task__plot_description": " Plot description: The plot to be created will involve creating a figure with four separate axes arrangement using a custom divider. Each axis will plot one of the dataframe columns (data1, data2, data3, data4). The axes are arranged in a layout that has varying size ratios both horizontally and vertically.",
+    "task__plot_style": " Plot style description: Each plot should be devoid of tick labels on both the x and y axes. The plot design involves grid-based positioning of the axes without adhering to standard rectangular alignment by using scaled and fixed sizing segments.",
+    "_task__plot_description_short": "Plot Description: Create a figure with four axes using a custom divider, each plotting one of the dataframe columns (data1, data2, data3, data4). Arrange the axes with varying size ratios both horizontally and vertically.",
+    "_task__plot_description_short_single": "Plot Description: Create a figure with four axes using a custom divider, each plotting one of the dataframe columns (data1, data2, data3, data4) with varying size ratios horizontally and vertically."
+  },
+  {
+    "id": "9",
+    "task__plot_description": " Plot Description: The plot should consist of four subplots arranged in a 2x2 grid. Each subplot will display a scatter plot of the 'x' and 'y' columns from the DataFrame. Different subplots should feature different marker colors for distinction.\n",
+    "task__plot_style": " Plot Style Description: Each subplot should have specific axis limits set to clearly define different ranges on each plot. The top-right subplot should showcase a limit on the x-axis up to 1, while the bottom-left should limit the y-axis up to 2, with other subplots adjusted similarly. Use a grid layout manager to distribute the subplots evenly within the plot figure, and aspect ratios should be managed to ensure the plots are square-shaped. Adjust subplot spacing and disable axis labels for a cleaner look.",
+    "_task__plot_description_short": "Plot Description: Create a 2x2 grid of subplots, each showing a scatter plot of 'x' vs 'y' from the DataFrame. Use different marker colors for each subplot.",
+    "_task__plot_description_short_single": "Plot Description: Create a 2x2 grid of scatter plots from DataFrame's 'x' and 'y' columns, each subplot with different marker colors."
+  },
+  {
+    "id": "10",
+    "task__plot_description": " Plot Description: The script should generate a line plot. The main plot will use the 'xx' column for the x-axis and 'sin_xx' column for the y-values. Additionally, overlay the plot with a secondary x-axis that represents the angle values in radians with specific labels like 0, π/2, π, 3π/2, and 2π, enhancing the readability of radian measures for trigonometric functions.",
+    "task__plot_style": " Plot Style Description: The primary line plot should be clear and uncluttered with visible axes labels. The secondary x-axis, positioned at the top, should display the radian values distinctly while the labels on the right side of the plot should be hidden to maintain visual simplicity. The ticks and labels on the top x-axis should precisely correspond to standard radian values, improving interpretative clarity of the plot regarding trigonometric relationships.\n",
+    "_task__plot_description_short": "Plot Description: Generate a line plot using 'xx' for the x-axis and 'sin_xx' for the y-values. Overlay with a secondary x-axis showing angle values in radians labeled as 0, π/2, π, 3π/2, and 2π.",
+    "_task__plot_description_short_single": "Plot Description: Generate a line plot using 'xx' for the x-axis and 'sin_xx' for the y-axis, with a secondary x-axis labeled with 0, π/2, π, 3π/2, and 2π in radians."
+  },
+  {
+    "id": "11",
+    "task__plot_description": " Plot Description: The code should generate a visual representation of the DataFrame as an image plot. Each cell of the plot corresponds to a value in the DataFrame, with different colors representing different data values. A color bar should be added to the right of the plot to act as a legend, indicating the data value corresponding to each color.\n",
+    "task__plot_style": " Plot Style Description: The plot will have a color gradient where colors change according to the values represented. The color bar on the right will help in gauging the data values based on the color shades shown in the plot. Elements like axis visibility, color palette, and layout specifications will be controlled to enhance visual clarity and appeal.",
+    "_task__plot_description_short": "Plot Description: Generate an image plot of the DataFrame with each cell's color representing its value. Add a color bar to the right as a legend for the data values.",
+    "_task__plot_description_short_single": "Plot Description: Create a heatmap of the DataFrame with a color bar legend."
+  },
+  {
+    "id": "12",
+    "task__plot_description": " Plot Description: Create a plot that visualizes the RGB values from the DataFrame as a color image. The image should be formed by reshaping each color component into a 13x13 grid, where each cell represents a combined RGB value. The overall goal is to display these colors as a cohesive plot, conveying how these separate color intensities blend together.\n",
+    "task__plot_style": " Plot Style Description: In addition to the main RGB visualization, adjust the plotting area for optimal viewing. Set specific limits for the axes to focus on key areas, ensuring that the entire color range is effectively displayed. Choose a style of interpolation that minimizes pixelation, maintaining a smooth transition between colors, and set the origin of the plot appropriately for standard image display conventions.",
+    "_task__plot_description_short": "Plot Description: Create a plot visualizing RGB values from the DataFrame as a color image by reshaping each color component into a 13x13 grid. Display these colors cohesively to show how the separate color intensities blend together.",
+    "_task__plot_description_short_single": "Plot Description: Visualize RGB values from the DataFrame as a 13x13 color image, with each cell representing a combined RGB value."
+  },
+  {
+    "id": "13",
+    "task__plot_description": " Plot Description: Create a 2D line plot using the dataframe's 'x' and 'y' columns. Display axes with arrows highlighting the positive direction, originating from the axis intersection at zero. Ensure that only the essential axes are visible, specifically the ones through the origin, to emphasize the curve in relation to these axis points.\n",
+    "task__plot_style": " Plot Style Description: Style the plot to have a clean and minimalistic look. Remove the top and right borders of the plot and ensure that the left and bottom axes, including their negatives, are clearly visible without arrowheads at non-zero ends. The plot line should be smooth and clearly illustrate the distribution and relationship between 'x' and 'y'. Use a color that stands out against the background for better visibility.",
+    "_task__plot_description_short": "Plot Description: Create a 2D line plot using the dataframe's 'x' and 'y' columns with axes arrows highlighting the positive direction from the origin. Ensure only the essential axes through the origin are visible to emphasize the curve.",
+    "_task__plot_description_short_single": "Plot Description: Create a 2D line plot using the dataframe's 'x' and 'y' columns with arrows on the axes originating from zero, showing only the essential axes through the origin."
+  },
+  {
+    "id": "14",
+    "task__plot_description": " Plot description: Create a plot that uses a curvilinear grid helper to transform the axes. The transformation involves a custom square root scaling on the x-axis while keeping the y-axis linear. Implement an inverse transformation accordingly. Over this transformed grid, display the data from the dataframe as an image with specific styling parameters like color mapping and interpolation settings.",
+    "task__plot_style": " Plot style description: Use a grayscale reverse color map to represent the values of the dataframe in the plot. Set specific parameters for the visual representation of the data, including the maximum value parameter for color scaling and the interpolation method for how data points are visually linked. Also, adjust the axis appearance and the origin of the plot image.",
+    "_task__plot_description_short": "Plot Description: Create a plot with a curvilinear grid helper to apply a custom square root scaling on the x-axis and keep the y-axis linear, including an inverse transformation. Display the dataframe as an image with specific color mapping and interpolation settings.",
+    "_task__plot_description_short_single": "Plot Description: Create a plot with a curvilinear grid helper applying square root scaling on the x-axis, linear y-axis, and inverse transformation, displaying the dataframe as an image with specified colormap and interpolation."
+  },
+  {
+    "id": "15",
+    "task__plot_description": " Plot Description: Develop a plot using a polar projection within a rectangular grid. The plot will map the 'Theta' values against 'R' values from the DataFrame. This will require transforming the angular data from degrees to radians and setting up a polar coordinate system in a rectangular plot area. Labels will be added to specific axes to indicate both angular and radial measurements.\n",
+    "task__plot_style": " Plot Style Description: The style of the plot should include a grid to enhance readability, with the background consisting of concentric circles and radial lines to represent the angles. Axis labels should be formatted to indicate angles in degrees and radial distances. Display limits for the x and y axes should be explicitly set to frame the plot area properly, ensuring all data points are visible within the defined boundary of the plot. The overall aspect ratio should be adjusted to maintain proportional scaling between axes.",
+    "_task__plot_description_short": "Plot Description: Develop a polar plot mapping 'Theta' (converted to radians) against 'R' values from the DataFrame within a rectangular grid. Add labels to indicate angular and radial measurements.",
+    "_task__plot_description_short_single": "Plot Description: Create a polar plot in a rectangular grid with 'Theta' (converted to radians) vs 'R' from the DataFrame, including angular and radial axis labels."
+  },
+  {
+    "id": "16",
+    "task__plot_description": " Plot Description: Create a plot where 'Distance' will serve as the x-axis. The primary y-axis will display 'Density', and two secondary y-axes will be created; one for 'Temperature' and the other for 'Velocity'. Each variable will be represented as a separate line graph on the plot, with distinct colors to distinguish between them.\n",
+    "task__plot_style": " Plot Style Description: The primary y-axis on the left will be colored and labelled for 'Density'. Two secondary y-axes on the right will be color-coordinated and labelled respectively for 'Temperature' and 'Velocity', with the 'Velocity' axis positioned a little more to the right. Each line representing a variable will have a unique color. Additionally, include a legend to identify each line, and customize tick mark labels and axis labels accordingly to enhance readability and visual appeal. The axis labels will also be color-coordinated to match the line they represent.",
+    "_task__plot_description_short": "Plot Description: Create a plot with 'Distance' on the x-axis, 'Density' on the primary y-axis, and two secondary y-axes for 'Temperature' and 'Velocity'. Represent each variable as a separate line graph with distinct colors.",
+    "_task__plot_description_short_single": "Plot Description: Plot 'Distance' on x-axis, 'Density' on primary y-axis, 'Temperature' and 'Velocity' on secondary y-axes, each as distinct colored lines."
+  },
+  {
+    "id": "17",
+    "task__plot_description": " Plot Description: Create a plot with three line series, each representing a different physical quantity (Density, Temperature, and Velocity) as a function of the Distance. The main axis (x-axis) represents the \"Distance\", while the main y-axis (left y-axis) represents the \"Density\". Add two additional y-axes: one for \"Temperature\" and another for \"Velocity\", each on the right side but with a distinct vertical display offset for the additional axis representing \"Velocity\". All three physical quantities should be distinguishably plotted with unique colors.\n",
+    "task__plot_style": " Plot Style Description: Customize each axis to match the color of its corresponding data series line. Label each axis appropriately to indicate which physical quantity it represents. Set distinct limits for each y-axis based on the range of data values for Temperature and Velocity. Include a legend that explains which color corresponds to which physical quantity. Ensure the plot is clear and easy to understand, utilizing axis labels and legends effectively.",
+    "_task__plot_description_short": "Plot Description: Create a plot with three line series for Density, Temperature, and Velocity as a function of Distance. The x-axis represents Distance, the left y-axis represents Density, and two right y-axes represent Temperature and Velocity with a distinct vertical offset for Velocity, using unique colors for each quantity.",
+    "_task__plot_description_short_single": "Plot Description: Create a plot with three line series for Density, Temperature, and Velocity as a function of Distance, with Distance on the x-axis, Density on the left y-axis, and Temperature and Velocity on two right y-axes with a vertical offset for Velocity, using unique colors for each series."
+  },
+  {
+    "id": "18",
+    "task__plot_description": " Plot Description: The task requires creating a line plot using the values from the DataFrame. The x-axis should use index values from the DataFrame, and the y-axis should plot corresponding 'Y' values. Enhance the plot with customized axes by adding an additional y-axis on the right side that is offset from the primary y-axis. Remove visibility of the top and right borders of the plot to keep it clean. Additionally, ensure the primary x-axis (xzero axis) is highlighted to pass through y=0, indicating it as a significant reference line.\n",
+    "task__plot_style": " Plot Style Description: The plot should prominently feature labels for both Y axes and the X axis. The right Y axis (labeled as \"Label Y2\") should be visibly offset from the primary frame to distinguish its measurements. Configure the visibility and labels of axes to ensure clarity in data representation. The plot should also include custom limits for the y-axis to adequately encase the data range and improve readability.",
+    "_task__plot_description_short": "Plot Description: Create a line plot using DataFrame index for x-axis and 'Y' values for y-axis, adding a secondary y-axis on the right. Remove top and right borders, and highlight the primary x-axis at y=0.",
+    "_task__plot_description_short_single": "Plot Description: Create a line plot using DataFrame index for x-axis and 'Y' values for y-axis, add a secondary y-axis on the right, remove top and right borders, and highlight the x-axis at y=0."
+  },
+  {
+    "id": "19",
+    "task__plot_description": " Plot Description: The task involves creating a plot where the horizontal axis will pass through zero on the vertical scale, emphasizing the significance of the origin in the plot's context. The horizontal line (x-axis) at y=0 should be highlighted or labeled clearly. The plot should depict the relationship between the 'x' and 'y' columns of the dataframe, showing the trend or pattern described by these variables.\n",
+    "task__plot_style": " Plot Style Description: The visual style of the plot will be minimalistic, with major focus lines such as the x-axis (at y=0) being clearly visible and emphasized. Other axes, such as the top and right borders of the plot, should be hidden to direct focus solely on the plotted data and the special x-axis. The x-axis should be labeled at a suitable position, enhancing the plot's readability and interpretative ease. The graph should effectively communicate any periodic or significant patterns present in the data.",
+    "_task__plot_description_short": "Plot Description: Create a plot of the dataframe's 'x' and 'y' columns, emphasizing the origin by passing the horizontal axis through zero. Highlight or label the x-axis at y=0 to show the trend or pattern between the variables.",
+    "_task__plot_description_short_single": "Plot Description: Create a plot of 'x' vs 'y' from the dataframe with the x-axis passing through y=0, clearly highlighting or labeling the horizontal line at y=0."
+  },
+  {
+    "id": "20",
+    "task__plot_description": " Plot Description: The task involves generating a line plot that visually represents the trends over rows for each of the columns A, B, and C in the dataframe. This graph will display the value changes across each record for all three columns, where the x-axis represents the row index, and the y-axis represents the values of the columns.\n",
+    "task__plot_style": " Plot Style Description: The style of the plot should ensure readability and clarity in visual differentiation between the lines representing different columns. Customize the plot by removing the top and right spines of the plot area to reduce visual clutter, enhancing the overall aesthetic and focus on the data presentation. The lines for each column should be distinctly colored to clearly differentiate between each dataset represented in the plot.",
+    "_task__plot_description_short": "Plot Description: Generate a line plot for columns A, B, and C, with the x-axis as the row index and the y-axis as the column values. Display value changes across each record for all three columns.",
+    "_task__plot_description_short_single": "Plot Description: Generate a line plot for columns A, B, and C with the x-axis as the row index and the y-axis as the column values."
+  },
+  {
+    "id": "21",
+    "task__plot_description": " Plot Description:\n   - Create a three-panel plot where each panel visually represents one of the dataframe's columns (Zpos, Zneg, Z) as 2D colored images. Each column's data must be reshaped into a square matrix format for visualization. Add a color bar for each panel to interpret the values highlighted in various colors.\n   ",
+    "task__plot_style": " Plot Style Description:\n   - Apply diverging color maps suitable to data characteristics for each panel (e.g., positive values in blue, negative values in red, and a range combining both for general data). Ensure no interpolation to maintain the integrity of each data point's visual representation. The final layout should clearly depict differences between positive, negative, and combined data distributions, with additional configuration for minor ticks on the color bar to enhance readability.",
+    "_task__plot_description_short": "Plot Description: Create a three-panel plot where each panel represents one of the dataframe's columns (Zpos, Zneg, Z) as 2D colored images, reshaped into square matrices. Add a color bar for each panel to interpret the values.",
+    "_task__plot_description_short_single": "Plot Description: Create a three-panel plot with each panel showing reshaped square matrices of dataframe columns (Zpos, Zneg, Z) as 2D colored images, including color bars."
+  },
+  {
+    "id": "22",
+    "task__plot_description": " Plot Description: Plot three series from the dataframe on a single graph. Each series ('smiddle', 'slower', 'supper') should be plotted against the 't' column. The three series will be represented as separate lines on the graph, showcasing how each varies over 't'.\n",
+    "task__plot_style": " Plot Style Description: The visual representation should clearly distinguish between the three data series by using different colors for each line. The resultant plot should include appropriate axes labels and a legend, if necessary, to ensure clarity in distinguishing between the different data series. The style should be visually appealing and clear, allowing easy comparison of trends across the three series.",
+    "_task__plot_description_short": "Plot Description: Plot three series ('smiddle', 'slower', 'supper') from the dataframe against the 't' column on a single graph. Represent each series as separate lines to showcase their variation over 't'.",
+    "_task__plot_description_short_single": "Plot Description: Plot 'smiddle', 'slower', and 'supper' against 't' on a single graph with separate lines for each series."
+  },
+  {
+    "id": "23",
+    "task__plot_description": " Plot Description: Create two subplots with constrained layout. The upper subplot is configured to display a line plot of the dataframe using a predefined color and line style cycle. The lower subplot will also display a line plot of the same dataframe but with a different color and line width cycle specified for that particular axes set.\n",
+    "task__plot_style": " Plot Style Description: The plot styles involve setting properties such as line width and color and linestyle cycles using default settings for the first subplot and using customized settings for the second subplot. Colors like red, green, blue, and yellow are used in the first subplot with solid, dashed, dotted, and dash-dot lines respectively. Meanwhile, cyan, magenta, yellow, and black colors along with increasing line widths are used for the second subplot.",
+    "_task__plot_description_short": "Plot Description: Create two subplots with constrained layout; the upper subplot displays a line plot of the dataframe using a predefined color and line style cycle, while the lower subplot shows a line plot of the same dataframe with a different color and line width cycle.",
+    "_task__plot_description_short_single": "Plot Description: Create two subplots with constrained layout; the upper subplot shows a line plot of the dataframe with a predefined color and line style cycle, while the lower subplot shows a line plot of the same dataframe with a different color and line width cycle."
+  },
+  {
+    "id": "24",
+    "task__plot_description": " Plot Description: Create a grid of plots (2x2) where each subplot corresponds to combinations of rows and columns indexed by 'irow' and 'icol'. Within each subplot, draw both horizontal and vertical lines at positions specified by the index 'i', with line colors and thickness denoted by 'color', 'lwx', and 'lwy'. Additionally, configure ticks, titles, and subplot background color, ensuring consistency across certain axes.",
+    "task__plot_style": " Plot Style Description: Configure the subplot backgrounds in the second row to be black. Adjust tick positions on axes selectively to improve readability. The plot titles should indicate the line widths used, formatted to a readable size. The overall plot should have a title that is larger in size, summarizing the theme or category of data visualized.",
+    "_task__plot_description_short": "Plot Description: Create a 2x2 grid of subplots for combinations of 'irow' and 'icol', drawing horizontal and vertical lines at 'i' with specified 'color', 'lwx', and 'lwy'. Configure ticks, titles, and subplot background color, ensuring consistency across certain axes.",
+    "_task__plot_description_short_single": "Plot Description: Create a 2x2 grid of subplots with horizontal and vertical lines at positions 'i', using 'color', 'lwx', and 'lwy' for styling, and configure ticks, titles, and background color consistently."
+  },
+  {
+    "id": "25",
+    "task__plot_description": " Plot Description: Create a plot displaying the relationship between time and voltage values for both 'voltage' and 'voltage_dash' columns. Display 'voltage' using a solid line and 'voltage_dash' using a dashed line to differentiate the two series clearly. Include appropriate labels for both axes and a title for the chart to effectively communicate the plot's purpose.\n",
+    "task__plot_style": " Plot Style Description: Style the plot with a distinctive background color for readability and aesthetic appeal. Set the color of the plot title and axis labels using specific tones that maintain visibility and contrast against the background. Use distinct color choices for the plot lines to separate the two data series visually. Adjust the color settings for tick labels to ensure they are clear and easily readable against the styled background.",
+    "_task__plot_description_short": "Plot Description: Create a plot showing the relationship between time and voltage for 'voltage' (solid line) and 'voltage_dash' (dashed line). Include axis labels and a title to clearly communicate the plot's purpose.",
+    "_task__plot_description_short_single": "Plot Description: Plot 'time' vs 'voltage' with a solid line and 'time' vs 'voltage_dash' with a dashed line, including axis labels and a title."
+  },
+  {
+    "id": "26",
+    "task__plot_description": " Plot Description: The task involves generating multiple contour and contour-filled plots from the structured grid data defined by the columns X, Y, and Z. These plots should demonstrate different visualization capabilities, including varying color maps, levels of contour, handling of data extremes with color extensions, and configuration of contour lines and labels.\n",
+    "task__plot_style": " Plot Style Description: Different styles and configurations are needed for distinct visual effects. These include:\n   - Using a grayscale color map and a red contour line for the first set of plots, with masked regions indicated.\n   - A set of color-coded contour fill plots with explicit color assignments for ranges both within and outside the defined levels (i.e., under and over values).\n   - For demonstrating the 'extend' feature in contour plots, using a color map that adjusts for values below and above specified thresholds, handling color overflow and underflow visually.\n   - Proper annotation and color bar adjustments to enhance the interpretability of the plots, including modifying label orientation, font sizes, and adding titles for axes and the overall plots.",
+    "_task__plot_description_short": "Plot Description: Generate multiple contour and contour-filled plots from the dataframe columns X, Y, and Z, showcasing different color maps, contour levels, and handling of data extremes with color extensions. Configure contour lines and labels to demonstrate various visualization capabilities.",
+    "_task__plot_description_short_single": "Plot Description: Generate multiple contour and contour-filled plots from dataframe columns X, Y, and Z, showcasing different color maps, contour levels, data extremes handling, and contour lines/labels configuration."
+  },
+  {
+    "id": "27",
+    "task__plot_description": " Plot Description: Create two plots side-by-side, each displaying a contour filled plot of Z values on a grid defined by X and Y coordinates. Additionally, overlay a contour line plot with the same Z values. Highlight data points excluded by the Mask using red circles. Each subplot should handle the corner mask parameter differently.",
+    "task__plot_style": " Plot Style Description: Use black grid lines with slight transparency for better visibility of contours. The title of each subplot should indicate the state of the corner mask parameter. The contour fill should vary in color according to the Z value, with each plot showing contour lines in black for clarity and contrast.",
+    "_task__plot_description_short": "Plot Description: Create two side-by-side contour filled plots of Z values on an X-Y grid, overlaying contour lines and highlighting masked data points with red circles. Each subplot should use a different corner mask parameter.",
+    "_task__plot_description_short_single": "Plot Description: Create two side-by-side contour filled plots of Z on X-Y grid, overlay contour lines, highlight masked data points with red circles, and vary corner mask parameter for each subplot."
+  },
+  {
+    "id": "28",
+    "task__plot_description": " Plot Description: Create a series of plots in a 2x2 grid layout:\n   - The first plot should display filled contour lines based on the Z values with color differentiation and contour lines highlighted in black. Add a green contour line at zero for prominence.\n   - The second and third plots should show images derived from the Z values, one with the origin at the upper edge and one at the lower, both overlaid with black contour lines. \n   - The fourth plot is an image with nearest neighbor interpolation and the y-axis reversed, also overlaid with black contour lines.\n",
+    "task__plot_style": " Plot Style Description: Adjust aesthetics and functionality across all plots:\n   - Employ a dual-ended colormap that highlights variation in Z values symmetrically around zero.\n   - Use color bars to indicate the value ranges in at least two of the plots.\n   - Set contour lines and images within specified axis extents to maintain uniform spatial representation.\n   - Apply clear titles to each subplot for easy identification and adjust plot layouts for optimized spacing and clarity.",
+    "_task__plot_description_short": "Plot Description: Create a 2x2 grid of plots: (1) filled contour lines of Z with color differentiation, black contour lines, and a green contour line at zero, (2) image of Z with origin at the upper edge and black contour lines, (3) image of Z with origin at the lower edge and black contour lines, (4) image of Z with nearest neighbor interpolation, y-axis reversed, and black contour lines.",
+    "_task__plot_description_short_single": "Plot Description: Create a 2x2 grid of plots: (1) filled contour plot of Z with black lines and a green zero contour, (2) image of Z with origin at upper edge and black contours, (3) image of Z with origin at lower edge and black contours, (4) image of Z with nearest neighbor interpolation, reversed y-axis, and black contours."
+  },
+  {
+    "id": "29",
+    "task__plot_description": " Plot Description: Create a heatmap displaying the harvest amount per farming entity for each type of vegetable. Display axes ticks for readability, customized with labels from the dataframe (vegetables and farmer names). Superimpose numerical harvest values over the heatmap for clarity and add annotation for understanding individual entries.\n",
+    "task__plot_style": " Plot Style Description: Configure the tick labels on the x-axis to make them more readable by rotating them. Enhance visual clarity and aesthetics by selecting appropriate colors for the heatmap where lower values might correspond to cooler colors and higher values to warmer colors. Emphasize text within the plot to ensure visibility against varying background colors. Ensure the plot is neatly laid out with an appropriate title and tight layout settings to optimize space usage and presentation.",
+    "_task__plot_description_short": "Plot Description: Create a heatmap displaying the harvest amount per farming entity for each type of vegetable, with customized axes ticks and labels from the dataframe. Superimpose numerical harvest values over the heatmap for clarity and add annotation for understanding individual entries.",
+    "_task__plot_description_short_single": "Plot Description: Create a heatmap of harvest amounts per farming entity for each vegetable, with labeled axes, numerical annotations, and clear readability."
+  },
+  {
+    "id": "30",
+    "task__plot_description": " Plot Description:\n   Generate two subplots using data from the DataFrame. Each subplot should display the data using an image visualization method where data values are represented as colored pixels. Mask certain conditions (e.g., values greater than a certain threshold). The first subplot should display the data with a uniform color normalization within the range specified, while the second subplot should utilize boundary normalization with specified thresholds to map colors.\n",
+    "task__plot_style": " Plot Style Description:\n   Customize the plot with specific color maps and norms:\n   - In the first subplot, use a grayscale color map with modifications to show segments of data that are beyond the normal range or masked, by using specific colors (such as red for high values and green for low values).\n   - In the second subplot, enhance the visualization by employing a boundary normalization method that uses a grayscale color map, again distinguishing out-of-range data with specified colors.\n   - Both subplots should have annotations and addition of colorbars to indicate the scale and extend the display of out-of-range values.\n   - Set the overall layout to ensure clarity and visual appeal, with titles for each subplot to explain the color encoding logic. Include an overarching title for the figure.\n",
+    "_task__plot_description_short": "Plot Description: Generate two subplots using image visualization of the DataFrame, masking values above a threshold. The first subplot uses uniform color normalization, and the second uses boundary normalization with specified thresholds.",
+    "_task__plot_description_short_single": "Plot Description: Create two subplots of the DataFrame using image visualization, masking values above a threshold; the first with uniform color normalization and the second with boundary normalization."
+  },
+  {
+    "id": "31",
+    "task__plot_description": " Plot Description: Display the dataframe as a colored grid where each cell represents an element of the dataframe. The color of each cell should reflect the magnitude of the value relative to the other cells, with a legend or scale possibly indicating value ranges. Provide interactive mouse-over feature to display the exact coordinates of the mouse pointer and the value of the cell at those coordinates on the plot.\n",
+    "task__plot_style": " Plot Style Description: The plot should use distinct colors to differentiate between the values, enhancing readability and visual appeal. The simplicity in the color scheme will aid in immediately distinguishing between high and low values. The axes should be clearly labelled to indicate row and column numbers, enhancing understandability of the plot layout. Incorporate a method for displaying value and coordinates dynamically when hovering over different parts of the plot, facilitating deeper analysis through interactivity.",
+    "_task__plot_description_short": "Plot Description: Display the dataframe as a colored grid with cell colors reflecting value magnitudes, including a legend for value ranges. Add an interactive mouse-over feature to show cell coordinates and values.",
+    "_task__plot_description_short_single": "Plot Description: Create an interactive heatmap of the dataframe with a color scale indicating value magnitudes and mouse-over tooltips showing cell coordinates and values."
+  },
+  {
+    "id": "32",
+    "task__plot_description": " Plot Description: The task involves visualizing the dataframe as a colored matrix where each cell's color intensity relates to its value. Each row and column of the matrix must be labeled clearly to understand the scale of the data. The main aim is to visually represent the variability and distribution of the dataframe's numerical values through hues, providing an immediate visual summary of the data characteristics.\n",
+    "task__plot_style": " Plot Style Description: The visualization will use a color scale that changes with the values to make different data magnitudes easily distinguishable. Axis labels should be apparent, showcasing row and column numbers corresponding to the dataframe's structure. The plot should have a cohesive color theme that aids in pattern recognition and highlights progression across the dataframe.",
+    "_task__plot_description_short": "Plot Description: Visualize the dataframe as a colored matrix where cell color intensity relates to its value, with clearly labeled rows and columns. The aim is to represent the variability and distribution of numerical values through hues for an immediate visual summary.",
+    "_task__plot_description_short_single": "Plot Description: Create a heatmap of the dataframe with labeled rows and columns to visualize value intensity and distribution."
+  },
+  {
+    "id": "33",
+    "task__plot_description": " Plot description: Create two types of plots, placed as subplots in a single figure. The first plot should be a pseudocolor mesh plot that visualizes the 'z' values over 'x' and 'y' coordinates. The second plot should depict contour levels built from the 'x', 'y', and 'z' values. These plots should utilize a normalization and coloring scheme based on the provided levels determined from the 'z' data's range.\n",
+    "task__plot_style": " Plot style description: Utilize a diverging color map to differentiate values clearly in both subplots. Define a fixed number of levels to represent the data range effectively through color gradations. Ensure axis titles, color bars for scale reference, and appropriate plot titles are included to enhance readability. Adjust subplot spacing to prevent label overlap, maintaining a clean and organized visual presentation.",
+    "_task__plot_description_short": "Plot Description: Create subplots with a pseudocolor mesh plot of 'z' over 'x' and 'y', and a contour plot from 'x', 'y', and 'z'. Use normalization and coloring based on 'z' data's range.",
+    "_task__plot_description_short_single": "Plot Description: Create a figure with two subplots: a pseudocolor mesh plot of 'z' over 'x' and 'y', and a contour plot of 'z' with levels and normalization based on 'z' data's range."
+  },
+  {
+    "id": "34",
+    "task__plot_description": " Plot Description: Create a single figure containing three subplots arranged horizontally. Each subplot should display a two-dimensional grid plot of the data:\n   - The first plot should visualize the 'Z' values against 'Qx' and 'Qz' grids, showing data distribution without masking any values.\n   - The second plot should also show 'Qx' and 'Qz' grids but plot 'Zm' values where missing data are visualized distinctly using a custom color map.\n   - The third plot should repeat the second plot layout but without adjusting the color map, directly handling missing data as per default settings. Each subplot should be clearly titled to denote whether they include masked values or not.\n",
+    "task__plot_style": " Plot Style Description: Use a smooth shading interpolation for all three plots to enhance visual clarity. The first two plots should have specific styling adjustments: the second plot necessitates a modified color map where masked (missing) values receive a specific color. Ensure the layout is tight to prevent overlap of subplot contents for neat representation. The color palette should be consistent across plots where masked values are treated distinctly for enhanced data interpretation.",
+    "_task__plot_description_short": "Plot Description: Create a figure with three horizontal subplots: the first shows 'Z' against 'Qx' and 'Qz', the second shows 'Zm' with a custom colormap for missing data, and the third shows 'Zm' with default handling of missing data. Title each subplot to indicate the presence or absence of masked values.",
+    "_task__plot_description_short_single": "Plot Description: Create a figure with three horizontal subplots showing 2D grid plots of 'Z' (Qx vs Qz), 'Zm' (Qx vs Qz) with custom colormap for missing data, and 'Zm' (Qx vs Qz) with default handling of missing data, each subplot titled accordingly."
+  },
+  {
+    "id": "35",
+    "task__plot_description": " Plot Description: Create a vector field plot using the data from the DataFrame. The plot should graphically represent vectors with components (U, V) at points (X, Y) on a two-dimensional grid. Include a key in the plot to indicate the scaling of the vectors, with specifications on its position relative to the plot area.\n",
+    "task__plot_style": " Plot Style Description: The plot should be stylized to ensure legibility and aesthetic appeal. This includes setting an appropriate scale and limits for the axes to encompass all data points neatly. Aesthetic enhancements like labeling the axes and including a descriptive title or legend for the vector scale are also essential. Adjust the plot’s general appearance such as colors or line styles to make important features stand out and ensure the plot communicates the data clearly and effectively.",
+    "_task__plot_description_short": "Plot Description: Create a vector field plot using DataFrame data with vectors (U, V) at points (X, Y) on a 2D grid. Include a key indicating vector scaling, specifying its position relative to the plot area.",
+    "_task__plot_description_short_single": "Plot Description: Create a vector field plot from the DataFrame with vectors (U, V) at points (X, Y) on a 2D grid, including a key for vector scaling."
+  },
+  {
+    "id": "36",
+    "task__plot_description": " Plot Description: The plot should consist of two subplots arranged vertically. The top plot should be a simple line plot illustrating how the 'Signal' varies over 'Time'. The bottom plot should be a spectrogram representing the frequency content of the 'Signal' over 'Time'. The spectrogram plot should use a specific frequency analysis window and overlap parameter.\n",
+    "task__plot_style": " Plot Style Description: The top plot should have clear, labelled axes indicating the units of 'Time' and 'Signal'. It should display the full range of the data. The bottom spectrogram plot should include axes indicating time and frequency, with frequency on the vertical axis extending to the adequate range based on the sampling rate used in spectrogram computation. Both plots should share the same horizontal 'Time' axis for easy comparison. Colormaps, axis labels, and layout configurations should enhance clarity and understanding of data representation.",
+    "_task__plot_description_short": "Plot Description: Create two vertically arranged subplots: a top line plot of 'Signal' vs. 'Time' and a bottom spectrogram of 'Signal' over 'Time' with specified frequency analysis window and overlap.",
+    "_task__plot_description_short_single": "Plot Description: Create a vertical subplot with a line plot of 'Signal' vs 'Time' on top and a spectrogram of 'Signal' vs 'Time' with specified frequency analysis window and overlap on the bottom."
+  },
+  {
+    "id": "37",
+    "task__plot_description": " Plot Description: \n   Create a grid of four separate plots (2x2 layout), where each plot will visualize the matrix from the DataFrame. The visualization should reflect the presence or absence of significant values in the matrix, possibly using differing precision and depiction settings across plots to highlight different aspects. Each matrix plot should be customizable in terms of how the data entries are visualized (e.g., adjusting precision or marker size) to allow a nuanced examination of the numerical data.\n",
+    "task__plot_style": " Plot Style Description:\n   Apply specific style adjustments to each subplot for clear differentiation. One plot should use standard settings, another with adjusted precision, one with both adjusted precision and marker size, and one more with customized marker size. These variations will aid in better understanding the spread and concentration of significant values in the DataFrame's matrix by altering the granularity and scaling of visual indicators. Adjust axes and tick settings as necessary for optimal clarity and presentation aesthetics. Choose style settings such as color or marker types to enhance legibility and analytical utility.",
+    "_task__plot_description_short": "Plot Description: Create a 2x2 grid of plots visualizing the DataFrame matrix, each plot highlighting different aspects using varying precision and depiction settings. Customize each plot's data visualization (e.g., precision, marker size) for nuanced examination.",
+    "_task__plot_description_short_single": "Plot Description: Create a 2x2 grid of matrix plots from the DataFrame, each customizable in precision and marker size to highlight different data aspects."
+  },
+  {
+    "id": "38",
+    "task__plot_description": " Plot Description: The goal is to create a plot exhibiting a triangulation and high-resolution contour mapping of scalar data. Triangulation should be based on the 'x' and 'y' coordinates, and contouring reflects the 'z' values to visualize data topology with both contour lines and color-filled contour levels. Include the plot title and equal aspect ratio to maintain spatial proportions.\n",
+    "task__plot_style": " Plot Style Description: Utilize a terrain color map to fill contours and depict elevation or density with varying hues. Contours should be visually distinguished by varying widths and greyscale colors to indicate different thresholds. The plot should prioritize clarity and aesthetic appeal, integrating fine lines for the triangulated grid and smooth, vibrant color transitions for the contour fills. The background or base of the plot should be styled minimally to ensure focal attention on the contour features.",
+    "_task__plot_description_short": "Plot Description: Create a plot showing triangulation and high-resolution contour mapping of scalar data using 'x' and 'y' for triangulation and 'z' for contouring, with contour lines and color-filled levels. Include a title and set an equal aspect ratio to maintain spatial proportions.",
+    "_task__plot_description_short_single": "Plot Description: Create a triangulation and high-resolution contour plot of 'z' values based on 'x' and 'y' coordinates, with contour lines, color-filled levels, plot title, and equal aspect ratio."
+  },
+  {
+    "id": "39",
+    "task__plot_description": " Plot Description:\n   - Produce a grouped bar chart which shows scores for men and women across different groups.\n   - Each group identified by 'labels' should have two adjacent bars showing scores for men and women respectively.\n   - Include annotations displaying the score value on top of each bar.\n   - Add a legend to differentiate between men’s and women’s scores.\n",
+    "task__plot_style": " Plot Style Description:\n   - Set the y-axis label to \"Scores\".\n   - Set the plot title to \"Scores by group and gender\".\n   - For each group on the x-axis, label the ticks according to the 'labels' column.\n   - Format the plot to ensure all elements are displayed correctly and without overlap.",
+    "_task__plot_description_short": "Plot Description: Produce a grouped bar chart showing scores for men and women across different groups identified by 'labels', with annotations displaying the score value on top of each bar. Add a legend to differentiate between men’s and women’s scores.",
+    "_task__plot_description_short_single": "Plot Description: Produce a grouped bar chart showing scores for men and women across different groups with annotations on each bar and a legend."
+  },
+  {
+    "id": "40",
+    "task__plot_description": " Plot Description: The plot will be a horizontal bar chart displaying individuals' performance on the vertical axis with their respective performance values on the horizontal axis. Error bars will be added to each bar to represent the variability in the performance measurements. The vertical axis will display the names of individuals and should be inverted so that the labels read top-to-bottom. The horizontal axis will be labeled as 'Performance'. A title will be added at the top of the plot.\n",
+    "task__plot_style": " Plot Style Description: The chart will use a simple, clear style with bars in a solid color. The plot's layout will be straightforward with clearly labeled axes and bars, along with inclusively displayed error bars for each individual's performance data. The plot will emphasize readability and direct representation of data values, ensuring that the visual presentation matches the data's intent.",
+    "_task__plot_description_short": "Plot Description: Create a horizontal bar chart with individuals' names on the inverted vertical axis and performance values on the horizontal axis, including error bars for variability. Label the horizontal axis as 'Performance' and add a title at the top.",
+    "_task__plot_description_short_single": "Plot Description: Create a horizontal bar chart with individuals' names on the inverted vertical axis, performance values on the horizontal axis labeled 'Performance', error bars for variability, and a title at the top."
+  },
+  {
+    "id": "41",
+    "task__plot_description": " Plot Description: Create a grouped bar chart that visually compares the means and variability (standard deviation) of scores between men and women across different categories specified in the dataframe. Each category should have two bars (one for men and one for women), the bars should be grouped side by side, and error bars should represent the standard deviations.\n",
+    "task__plot_style": " Plot Style Description: Customize the plot with a title \"Scores by group and gender\". Label the y-axis as 'Scores' and configure the x-axis to show category labels from the 'categories' column of the dataframe. Use different colors for men and women to differentiate between the bars. Include a legend to identify color coding. Set the ticks on the y-axis from 0 to 80 with intervals of 10.",
+    "_task__plot_description_short": "Plot Description: Create a grouped bar chart comparing the means and standard deviations of scores between men and women across different categories. Each category should have two bars (one for men and one for women) with error bars representing the standard deviations.",
+    "_task__plot_description_short_single": "Plot Description: Create a grouped bar chart comparing means and standard deviations of scores between men and women across categories, with side-by-side bars and error bars for standard deviations."
+  },
+  {
+    "id": "42",
+    "task__plot_description": " Plot Description: The task involves creating three different plots displayed horizontally in one row: a bar chart, a scatter plot, and a line plot. Each plot should use the 'names' column for the x-axis and the 'values' column for the y-axis. Each subplot should share the same y-axis to maintain uniform scaling across the plots.\n",
+    "task__plot_style": " Plot Style Description: Adjust the overall size of the figure to ensure readability and maintain proportional spacing between the plots. Include a super title across the top of the figure to label it as a categorical comparison. The visual style should be clean and clearly distinguish each type of plot for easy comparison.",
+    "_task__plot_description_short": "Plot Description: Create a horizontal row of three plots (bar chart, scatter plot, line plot) using 'names' for the x-axis and 'values' for the y-axis. Ensure all subplots share the same y-axis for uniform scaling.",
+    "_task__plot_description_short_single": "Plot Description: Create a horizontal row of bar, scatter, and line plots using 'names' for x-axis and 'values' for y-axis, sharing the same y-axis."
+  },
+  {
+    "id": "43",
+    "task__plot_description": " Plot Description: Create a plot with two vertically stacked subplots. The first subplot should display two time series, 's1' and 's2', against 'time'. The second subplot should show the Cross-Spectral Density (CSD) between 's1' and 's2' calculated at specified parameters.",
+    "task__plot_style": " Plot Style Description: Adjust layout for clear visibility of both subplots. The top subplot should have grid lines and labeled axes. The bottom subplot should show the CSD values in decibels with frequency on the horizontal axis and CSD magnitude on the vertical axis. Set appropriate axis limits and labels for both plots.",
+    "_task__plot_description_short": "Plot Description: Create a plot with two vertically stacked subplots; the first subplot displays 's1' and 's2' against 'time', and the second subplot shows the Cross-Spectral Density (CSD) between 's1' and 's2' with specified parameters.",
+    "_task__plot_description_short_single": "Plot Description: Create a plot with two vertically stacked subplots, the first showing 's1' and 's2' against 'time', and the second displaying the Cross-Spectral Density (CSD) between 's1' and 's2'."
+  },
+  {
+    "id": "44",
+    "task__plot_description": " Plot Description: Create a plot that includes multiple lines where each represents data and error limits from the dataframe. Each line corresponds to a different adjustment of error bars (like upper limits, lower limits, or both). Add legends to distinguish between these different error adjustments.",
+    "task__plot_style": " Plot Style Description: Enhance the plot visually by using different colors for each line. Use markers to indicate the data points, utilize error bars to represent uncertainty, and apply line styles to differentiate between the varying error bar settings. Place a legend in the lower right corner to guide the viewer in interpreting the lines with respect to their associated dataset and error bar settings.",
+    "_task__plot_description_short": "Plot Description: Create a multi-line plot from the dataframe, each line representing data with different error adjustments (upper, lower, or both). Add legends to distinguish between these error adjustments.",
+    "_task__plot_description_short_single": "Plot Description: Plot multiple lines from the dataframe with different error adjustments (upper, lower, both) and add legends to distinguish them."
+  },
+  {
+    "id": "45",
+    "task__plot_description": " Plot Description: Create a set of subplots where the first plot visualizes all data points with error bars, and the second plot displays error bars at a reduced frequency for clarity. Each plot should share the same x-axis to maintain consistency in comparison.",
+    "task__plot_style": " Plot Style Description: Design the plots ensuring readability and clarity. Include error bars for visualization of uncertainties. Set titles for individual subplots to describe the data representation specifically, and use an overarching title for the combined figure to unify the theme of the analysis. Adjust visual elements such as color and style to enhance the presentation and interpretability of the data.",
+    "_task__plot_description_short": "Plot Description: Create subplots where the first plot shows all data points with error bars, and the second plot shows error bars at a reduced frequency. Ensure both plots share the same x-axis for consistent comparison.",
+    "_task__plot_description_short_single": "Plot Description: Create subplots with the first showing all data points with error bars and the second showing reduced frequency error bars, sharing the same x-axis."
+  },
+  {
+    "id": "46",
+    "task__plot_description": " Plot Description: Create a line plot for each x-y data pair. The plot should include distinct lines for each dataset to visually separate them. After plotting lines, enhance the graph by marking individual data points for x and y coordinates that correspond to each dataset using vertical and horizontal lines.",
+    "task__plot_style": " Plot Style Description: The plot should be clear and well-designed for readability. Use contrasting colors to differentiate between the two datasets. Additional marks for data points should be subtle yet visible, extending across a small fraction of the plot area without overpowering the line plots. Set plot limits to encapsulate all data points comfortably and add a title for context.",
+    "_task__plot_description_short": "Plot Description: Create a line plot for each x-y data pair with distinct lines for each dataset. Enhance the graph by marking individual data points with vertical and horizontal lines.",
+    "_task__plot_description_short_single": "Plot Description: Create a line plot for each x-y data pair with distinct lines, marking individual data points with vertical and horizontal lines."
+  },
+  {
+    "id": "47",
+    "task__plot_description": " Plot Description: Create multiple line and area plots over two figures with shared y-axes:\n   - In the first figure, plot three subplots:\n     1. Area between x-axis values 0 and values from `x1` column.\n     2. Area between x-axis values from `x1` column and 1.\n     3. Area between x-axis values from `x1` column and values from `x2` column.\n   - In the second figure, plot two subplots:\n     1. Overlaid line plots of y vs. `x1` and y vs. `x2` with areas filled based on conditions comparing `x1` and `x2`.\n     2. Overlaid line plots of y vs. `x1` and y vs. a masked version of `x2` (`x2_masked`) with areas filled under the same conditions as above but depicting only regions where `x2` is greater than 1 as masked.\n",
+    "task__plot_style": " Plot Style Description: Each subplot should distinctly color regions based on the specific condition being visualized. Employ colors to effectively highlight differences, such as red and green to differentiate areas where conditions on `x1` and `x2` vary, and blue tones for simple area fills. Titles should clearly indicate what each subplot represents. All x-axis labels, grid lines, and other stylistic elements should be properly aligned to enhance readability and visual appeal.",
+    "_task__plot_description_short": "Plot Description: Create two figures with shared y-axes; the first figure has three area subplots (0 to `x1`, `x1` to 1, and `x1` to `x2`), and the second figure has two overlaid line plots with filled areas (y vs. `x1` and y vs. `x2`, and y vs. `x1` and y vs. `x2_masked` where `x2` > 1).",
+    "_task__plot_description_short_single": "Plot Description: Create two figures with shared y-axes; the first figure has three area subplots (0 to `x1`, `x1` to 1, `x1` to `x2`), and the second figure has two overlaid line plots with filled areas (y vs. `x1` and `x2`, y vs. `x1` and masked `x2` where `x2` > 1)."
+  },
+  {
+    "id": "48",
+    "task__plot_description": " Plot Description: The task is to create a bar plot where the bar heights are determined by the 'y' values and the position of each bar corresponds to the 'x' values of the DataFrame. Additionally, each bar should have a gradient fill which reflects a visual gradient effect. Furthermore, an overall background gradient image needs to be added to the plot area.",
+    "task__plot_style": " Plot Style Description: Each bar in the plot should exhibit a vertical gradient using a specified color map (from full color at the top to faded at the bottom of the bar). The entire background of the plot should also display a horizontal gradient with a different specified color map. The plot should have clearly marked axes and the aspect ratio should be adjusted for better visual representation.",
+    "_task__plot_description_short": "Plot Description: Create a bar plot with bar heights from 'y' values and positions from 'x' values, each bar having a gradient fill. Add a background gradient image to the plot area.",
+    "_task__plot_description_short_single": "Plot Description: Create a bar plot with 'x' values for positions, 'y' values for heights, gradient-filled bars, and an overall background gradient image."
+  },
+  {
+    "id": "49",
+    "task__plot_description": " Plot description: Generate a line plot using the data from the dataframe. Plot two lines; one line will be for the 'y' values against 'x', and the other line for 'y2' values against 'x'. Incorporate a mechanism to style each line differently in terms of dashing patterns to distinguish between the two.\n",
+    "task__plot_style": " Plot style description: Customize the appearance of the two lines to enhance their distinction visually. Apply a specific dashing pattern to one line directly during its creation, while adjusting the other line’s pattern post-creation using a method that modifies its dash-sequence properties. Include a legend to label each line distinctly according to its dashing style.",
+    "_task__plot_description_short": "Plot Description: Generate a line plot with 'y' and 'y2' values against 'x' from the dataframe. Style each line differently using dashing patterns.",
+    "_task__plot_description_short_single": "Plot Description: Generate a line plot with 'y' vs 'x' and 'y2' vs 'x', using different dashing patterns for each line."
+  },
+  {
+    "id": "50",
+    "task__plot_description": " Plot Description: The goal is to create a plot consisting of two subplots sharing the same x and y axes. Each plot should display a line graph where segments between points are individually colored based on the derivative values ('dYdX'). The first plot will use a continuous color gradient to reflect the range of derivative values, and the second plot will use distinct color segments to categorize these values into intervals.\n",
+    "task__plot_style": " Plot Style Description: For the first subplot, apply a continuous color map to visualize the smooth transition across a spectrum reflecting the range of derivative values. In the second subplot, use a segmented color map with defined boundaries to demarcate specific ranges of the derivative with distinct colors. Both plots should include color bars indicating the mapping of the derivative values to the respective colors used in the plot. Additionally, set the width of the line segments and adjust the axes limits to appropriately encompass all data points with a slight margin.",
+    "_task__plot_description_short": "Plot Description: Create two subplots sharing the same x and y axes, each displaying a line graph with segments colored based on 'dYdX' values. The first plot uses a continuous color gradient, while the second categorizes values into distinct color intervals.",
+    "_task__plot_description_short_single": "Plot Description: Create two subplots sharing x and y axes; the first with a line graph using a continuous color gradient based on 'dYdX' values, and the second with distinct color segments categorizing 'dYdX' into intervals."
+  },
+  {
+    "id": "51",
+    "task__plot_description": " Plot Description: Create two subplots arranged vertically. In the first subplot, graph the 'voltage(mV)' against 'time(s)', clearly indicating any gaps due to NaN values between 0.4 and 0.6 seconds. In the second subplot, graph the same 'voltage(mV)' against 'time(s)' but include NaN values at the start and end of the dataset to showcase differing data handling. Both graphs should have axis labels and titles denoting the peculiarities of the data representation. Add a grid for better readability of the plots.\n",
+    "task__plot_style": " Plot Style Description: Use a line plot with a line width of 2 for visibility. The plots should include grid lines for easier interpretation of the data points. Set specific titles for each subplot to reflect the unique aspects of the data shown in each plot. Ensure the layout is tight so that labels and titles do not overlap. Display both plots in a clean and orderly manner. Adjust the layout to prevent any overlap or congestion in the visual presentation.",
+    "_task__plot_description_short": "Plot Description: Create two vertical subplots; the first shows 'voltage(mV)' vs 'time(s)' with NaN gaps between 0.4-0.6s, and the second includes NaNs at the start and end. Both plots should have axis labels, titles, and a grid for readability.",
+    "_task__plot_description_short_single": "Plot Description: Create two vertical subplots of 'voltage(mV)' vs 'time(s)' with the first highlighting NaN gaps between 0.4-0.6s and the second including NaNs at the dataset's start and end, both with axis labels, titles, and grids."
+  },
+  {
+    "id": "52",
+    "task__plot_description": " Plot Description: Generate a plot containing two subplots. The first subplot should display a line chart of sensor readings over time. The second subplot should analyze the frequency components of the sensor data using a power spectral density (PSD) plot, considering a specific frequency rate.\n",
+    "task__plot_style": " Plot Style Description: Style the plots with clearly defined axes and appropriate labeling. Ensure the line chart reflects changes over time with smooth curves or lines. The PSD plot should visibly outline the power distribution across different frequencies in a descriptively manner, using contrasting colors or styles for better visibility.",
+    "_task__plot_description_short": "Plot Description: Generate a plot with two subplots: a line chart of sensor readings over time and a power spectral density (PSD) plot analyzing frequency components of the sensor data.",
+    "_task__plot_description_short_single": "Plot Description: Generate a plot with two subplots: a line chart of sensor readings over time and a PSD plot analyzing frequency components of the sensor data."
+  },
+  {
+    "id": "53",
+    "task__plot_description": " Plot Description: The plot should include two scatter plots overlaid on each other, each representing sets of points using different areas for sizing and different markers. Additionally, a curved line should be plotted that indicates a boundary or threshold within the plot space.\n",
+    "task__plot_style": " Plot Style Description: For the scatter plots, use triangular and circular markers to differentiate between two series in the dataset. Size these markers based on related area columns. Apply color scaling to these points based on another column to represent a third variable visually. The line should be smooth and curved, visually defining a boundary between different regions on the plot.",
+    "_task__plot_description_short": "Plot Description: Create two overlaid scatter plots with different point sizes and markers, and add a curved line indicating a boundary or threshold.",
+    "_task__plot_description_short_single": "Plot Description: Overlay two scatter plots with different sizes and markers, and add a curved boundary line."
+  },
+  {
+    "id": "54",
+    "task__plot_description": " Plot Description: Construct a multi-plot figure with six subplots arranged in a 3x2 grid. Each subplot will display a scatter plot where 'x' and 'y' columns provide the data points’ positions, and the 'z' column determines the color of each point. Use different marker styles for each subplot to demonstrate various scatter plot customizations.",
+    "task__plot_style": " Plot Style Description: Style the scatter plots consistently regarding point size and color mapping across all subplots, but vary each subplot’s marker shape. This variation will include predefined shapes such as triangles and stars, as well as custom shapes defined by vertices coordinates and tuples. Ensure each subplot has clearly distinguishable markers while maintaining overall harmonious appearance.",
+    "_task__plot_description_short": "Plot Description: Create a 3x2 grid of subplots, each showing a scatter plot with 'x' and 'y' columns for positions and 'z' column for color. Use different marker styles for each subplot to showcase scatter plot customizations.",
+    "_task__plot_description_short_single": "Plot Description: Create a 3x2 grid of scatter plots using 'x' and 'y' for positions and 'z' for color, with different marker styles for each subplot."
+  },
+  {
+    "id": "55",
+    "task__plot_description": " Plot Description: Generate a scatter plot representing the relationship between 'Leprechauns' and 'Gold'. Use the 'Luck' values to adjust the size of the scatter points dynamically. The color of the scatter points should be consistently green, and each point should be represented with a specific marker symbolizing a suit, indicative of the 'Luck' attribute.",
+    "task__plot_style": " Plot Style Description: Configure the graph with properly labeled axes for 'Leprechauns' and 'Gold'. The sizes of the scatter marks (reflecting 'Luck') should have varying transparency to better visualize density and overlap. Include a legend in the upper-left corner to identify the 'Luck' attribute visually keying to the marker shape and color. Set a green color theme for markers to maintain visual appeal and coherence with the theme of luck.",
+    "_task__plot_description_short": "Plot Description: Generate a scatter plot of 'Leprechauns' vs 'Gold', with 'Luck' values adjusting the size of green scatter points. Use a suit symbol for markers representing the 'Luck' attribute.",
+    "_task__plot_description_short_single": "Plot Description: Create a scatter plot of 'Leprechauns' vs 'Gold', with point sizes based on 'Luck', points colored green, and markers symbolizing suits based on 'Luck'."
+  },
+  {
+    "id": "56",
+    "task__plot_description": " Plot Description: Produce a scatter plot for the provided DataFrame where each data point's X and Y coordinates are plotted, categorized by color, and with varying sizes according to 'scale'. Each unique color in the 'color' column defines a different group, and points should be plotted with an associated legend identifying each color. Transparency should be adjusted for better visualization.",
+    "task__plot_style": " Plot Style Description: Apply a grid to the plot background for better readability of data points. Use a non-bordered style for each data point to maintain the plot's clarity. Legends should be included to map colors to their corresponding data categories. Adjust the opacity to ensure that overlapping points are visually distinguishable.",
+    "_task__plot_description_short": "Plot Description: Produce a scatter plot for the DataFrame with X and Y coordinates, categorized by 'color' and sized by 'scale', including a legend for each color. Adjust transparency for better visualization.",
+    "_task__plot_description_short_single": "Plot Description: Scatter plot with X and Y coordinates, colored by 'color', sized by 'scale', with a legend and adjusted transparency."
+  },
+  {
+    "id": "57",
+    "task__plot_description": " Plot Description: Create a line plot using the provided DataFrame. The plot should use the 'time' column for the x-axis and 'voltage' column for the y-axis. After plotting, label the x-axis as 'time (s)' and y-axis as 'voltage (mV)'. The plot should also have an appropriate title.\n",
+    "task__plot_style": " Plot Style Description: Make sure the plot includes a grid for easier readability of the values. The lines on the plot should clearly represent the trend of voltage over time. Also ensure that the plot is saved as an image file for further usage.",
+    "_task__plot_description_short": "Plot Description: Create a line plot using 'time' for the x-axis and 'voltage' for the y-axis from the DataFrame. Label the x-axis as 'time (s)', y-axis as 'voltage (mV)', and add an appropriate title.",
+    "_task__plot_description_short_single": "Plot Description: Create a line plot using 'time' for x-axis and 'voltage' for y-axis, label axes as 'time (s)' and 'voltage (mV)', and add an appropriate title."
+  },
+  {
+    "id": "58",
+    "task__plot_description": " Plot Description: Create an area plot where values of specific series 'Fibonacci', 'Evens', and 'Odds' are stacked upon one another across the x-axis values. Include a legend in the plot, describing each data series for better readability.\n",
+    "task__plot_style": " Plot Style Description: The plot should be styled to clearly differentiate between the stacked areas with distinct colors for each data series. Position the legend in the upper left corner to enhance plot clarity and aesthetics. The x-axis should be properly labeled and visible, providing a clear index of progression for the data values. The overall appearance should be tidy and engaging, ensuring legibility all elements, especially in distinguishing between the different series stacked in the plot.",
+    "_task__plot_description_short": "Plot Description: Create a stacked area plot for series 'Fibonacci', 'Evens', and 'Odds' across the x-axis values. Include a legend for each data series.",
+    "_task__plot_description_short_single": "Plot Description: Create a stacked area plot for 'Fibonacci', 'Evens', and 'Odds' series with a legend."
+  },
+  {
+    "id": "59",
+    "task__plot_description": " Plot Description: Plot three sets of data ('pre', 'mid', 'post') from the dataframe against 'x'. Each dataset should be represented as both a step plot and a scatter plot on the same graph. Each type of data should be plotted distinctly, with variations in how the steps transition between data points.\n",
+    "task__plot_style": " Plot Style Description: Use different colors and markers for each of the data series to enhance visual distinction. Add transparency to the scatter plots to differentiate them from step plots. Include a plot legend to identify each series and reference the type of step transition used for clarity, positioning this legend appropriately. Display axes and grid lines for better readability of plotted data points.",
+    "_task__plot_description_short": "Plot Description: Plot 'pre', 'mid', 'post' against 'x' using both step and scatter plots on the same graph. Ensure distinct variations in step transitions for each dataset.",
+    "_task__plot_description_short_single": "Plot Description: Plot 'pre', 'mid', 'post' against 'x' with step and scatter plots, using distinct step transitions for each dataset."
+  },
+  {
+    "id": "60",
+    "task__plot_description": " Plot description:\n   - Create two subplots side by side;\n     - First subplot (left side): Plot 't' vs 's_nse' using a scatter plot marked with triangles. Add vertical lines at every 't' value, spanning from 0 to corresponding 's' values. Include additional static vertical lines at specific 't' values colored in red.\n     - Second subplot (right side): Plot 's_nse' vs 't' using scatter plot with triangles pointed upwards. Draw horizontal lines at each 't' value, running from 0 to corresponding 's' values with increased line width.\n   - Include x-labels for time and titles for each subplot.\n",
+    "task__plot_style": " Plot style description:\n   - Adjust the plot size appropriately for clarity and visual appeal.\n   - Style the scatter plots with triangle markers to differentiate the points clearly.\n   - Use distinct colors for static lines (like red) to highlight specific features within the plots.\n   - Customize line widths to enhance the visibility of lines in the plot.",
+    "_task__plot_description_short": "Plot Description: Create two side-by-side subplots. Left: Scatter plot 't' vs 's_nse' with triangles, vertical lines at 't' values to 's' values, and red static vertical lines; Right: Scatter plot 's_nse' vs 't' with upward triangles, horizontal lines at 't' values to 's' values with increased width, and include x-labels for time and titles for each subplot.",
+    "_task__plot_description_short_single": "Plot Description: Create two side-by-side subplots; left: scatter plot 't' vs 's_nse' with triangles, vertical lines at 't' values from 0 to 's' and static red vertical lines at specific 't' values; right: scatter plot 's_nse' vs 't' with upward triangles, horizontal lines at 't' values from 0 to 's' with increased line width; include x-labels for time and titles for each subplot."
+  },
+  {
+    "id": "61",
+    "task__plot_description": " Plot description: The plot consists of two subplots arranged vertically and sharing the x-axis. The first subplot displays the cross-correlation of columns 'x' and 'y', indicating the degree to which they shift relative to each other. The second subplot shows the autocorrelation of column 'x', exploring how this column correlates with itself at different lags.\n",
+    "task__plot_style": " Plot style description: Both subplots use vertical lines to mark significant relationships and are normalized. Line widths are consistent across plots, enhancing visual clarity. Grids are added to both plots to improve readability and data interpretation. The line width is set to a moderate thickness to ensure clear visibility of trends and correlations.",
+    "_task__plot_description_short": "Plot Description: Create two vertically arranged subplots sharing the x-axis. The first subplot shows the cross-correlation of columns 'x' and 'y', and the second subplot displays the autocorrelation of column 'x'.",
+    "_task__plot_description_short_single": "Plot Description: Create two vertically stacked subplots with a shared x-axis: the first for cross-correlation of 'x' and 'y', and the second for autocorrelation of 'x'."
+  },
+  {
+    "id": "62",
+    "task__plot_description": " Plot Description: Create a line plot based on the values from the dataframe. The X-axis should reflect the index of the dataframe, while the Y-axis should represent the values from the dataframe’s sole column. Ensure that the plot provides a clear visual representation of the data progression or trend.\n",
+    "task__plot_style": " Plot Style Description: The visual styling of the plot should include axes that are labeled clearly, and the line should be distinct and easily identifiable. Opt for a simple and clean background with grid lines to facilitate easier reading of the plotted values. The output format should support both display within a GUI and saving to an image file format. The resulting image should preserve the plot’s resolution and colors correctly.",
+    "_task__plot_description_short": "Plot Description: Create a line plot with the X-axis as the dataframe index and the Y-axis as the values from the dataframe’s sole column. Ensure the plot clearly shows the data trend.",
+    "_task__plot_description_short_single": "Plot Description: Create a line plot with the dataframe index on the X-axis and the sole column's values on the Y-axis to show data progression."
+  },
+  {
+    "id": "63",
+    "task__plot_description": " Plot Description: The task involves creating two plots. The first plot graphically represents the relationship between the two dataframe columns by plotting one against the other. A title should be added to this plot. The second part of the task includes taking the rendered image of this plot (captured directly from its pixel buffer), and then displaying this image as a new plot itself.",
+    "task__plot_style": " Plot Style Description: The first plot should be styled with clear labels, a title, and an appropriate scale on the axes to accurately represent the data points. The second plot involves displaying the pixel buffer as an image on a new plot frame without any frame or axes, focusing solely on the graphical representation of the first plot. This plot should retain clarity and accurately reflect the visual information from the first plot.",
+    "_task__plot_description_short": "Plot Description: Create a plot showing the relationship between two dataframe columns with a title. Capture this plot's image from its pixel buffer and display it as a new plot.",
+    "_task__plot_description_short_single": "Plot Description: Create a scatter plot of two dataframe columns with a title, capture its image, and display this image as a new plot."
+  },
+  {
+    "id": "64",
+    "task__plot_description": " Plot Description: Draw a 2-dimensional plot where each row from the DataFrame will be used to create a line segment on the plot. Each line segment’s start and end coordinates are dictated by 'x1', 'y1' for the start, and 'x2', 'y2' for the end of the line. The color of each line is specified in the 'color' column of the DataFrame. Additionally, include a partially transparent rectangle as a background feature on the plot.\n",
+    "task__plot_style": " Plot Style Description: Each line should inherit the color specified in the associated DataFrame row. The rectangle background should be black with low opacity. Set appropriate axis limits and aspect ratios to ensure all line segments and the rectangle are comfortably visible within the plot frame. Adjust other aesthetic elements like the plot's gridlines, axes visibility, and tick marks to enhance readability and visual appeal.",
+    "_task__plot_description_short": "Plot Description: Draw line segments for each DataFrame row using 'x1', 'y1' as start and 'x2', 'y2' as end coordinates, with colors from the 'color' column. Include a partially transparent rectangle as a background feature.",
+    "_task__plot_description_short_single": "Plot Description: Create a 2D plot with line segments from DataFrame rows using 'x1', 'y1' as start and 'x2', 'y2' as end coordinates, colored by 'color' column, and add a partially transparent rectangle as background."
+  },
+  {
+    "id": "65",
+    "task__plot_description": " Plot Description: Create a scatter plot using the data from the DataFrame. The 'x' column values should be plotted on the horizontal axis, and the 'y' column values should be plotted on the vertical axis. The vertical axis should display values formatted as millions for easier readability.\n",
+    "task__plot_style": " Plot Style Description: The plot should use point markers represented by circles. Ensure that the plot size, axes labels, and other styles are clearly configured to enhance visual appeal and readability. The formatting function for the vertical axis should convert raw numbers into a more readable format, displaying each value as a number in millions with a dollar sign prefix.",
+    "_task__plot_description_short": "Plot Description: Create a scatter plot with 'x' column on the horizontal axis and 'y' column on the vertical axis. Format the vertical axis values as millions.",
+    "_task__plot_description_short_single": "Plot Description: Create a scatter plot with 'x' on the horizontal axis and 'y' on the vertical axis, formatting the vertical axis values as millions."
+  },
+  {
+    "id": "66",
+    "task__plot_description": " Plot Description: The task involves creating two interactive plots that visualize data points from the 't' and 's' columns of the DataFrame. Each plot should display points as markers. The first plot should have an interactive cursor that displays the precise x and y coordinates of the cursor position. The second plot should include a snapping cursor that jumps to the nearest data point, and updates the displayed x and y values with precise data from the DataFrame.",
+    "task__plot_style": " Plot Style Description: Each plot should use circular markers for data points. The interactive cursor and snapping cursor should display as crossed lines (horizontal and vertical) with the current coordinates shown in text on the plot area. The design should ensure legible and clear visualization of data points and cursor positions, maintaining a consistent style between plots.",
+    "_task__plot_description_short": "Plot Description: Create two interactive plots from the 't' and 's' columns of the DataFrame with markers. The first plot should have a cursor displaying precise coordinates, and the second should have a snapping cursor that shows the nearest data point's coordinates.",
+    "_task__plot_description_short_single": "Plot Description: Create two interactive scatter plots of 't' vs 's' with one having a cursor showing precise coordinates and the other having a snapping cursor to the nearest data point."
+  },
+  {
+    "id": "67",
+    "task__plot_description": " Plot Description: Construct a series of three subplots vertically stacked. Each subplot should plot the same 'x' versus 'y' data. The default settings apply to the first plot, while specific enhancements and grid settings apply to the subsequent plots to differentiate them visually and highlight various features of the data.\n",
+    "task__plot_style": " Plot Style Description: Apply global style changes at the beginning, setting font attributes to be bold and adjusting tick properties for clarity and aesthetics. Employ a specific styling for the grid in the second and third subplots, altering color, linestyle, and linewidth to make the grid prominent. These style settings should revert to defaults before the final subplot to demonstrate the effect of global style settings versus localized, temporary adjustments. Each subplot visually confirms the effect of these styling choices on the data presentation.",
+    "_task__plot_description_short": "Plot Description: Construct three vertically stacked subplots of 'x' versus 'y' data. Apply default settings to the first plot, and use specific enhancements and grid settings for the subsequent plots to visually differentiate them.",
+    "_task__plot_description_short_single": "Plot Description: Create three vertically stacked subplots of 'x' vs 'y' from the dataframe, with the first using default settings, and the next two with specific enhancements and grid settings."
+  },
+  {
+    "id": "68",
+    "task__plot_description": " Plot Description: Create a plot using the values from the dataframe with 'xf' as horizontal coordinates and 'yf' as vertical coordinates. The data points should not be plotted as individual points but should instead be represented in a manner that emphasizes the continuity and connectivity between points, implying a filled area chart.\n",
+    "task__plot_style": " Plot Style Description: The plot should fill the area under a curve that is formed by connecting the data points sequentially from the dataframe. Emphasize a clear, boundary-defined filled style that highlights the shape formed by the data points. Use a single, bold color to fill the area for visual clarity and impact.",
+    "_task__plot_description_short": "Plot Description: Create a plot using 'xf' as horizontal coordinates and 'yf' as vertical coordinates from the dataframe. Represent the data as a filled area chart to emphasize continuity and connectivity between points.",
+    "_task__plot_description_short_single": "Plot Description: Create a filled area chart using 'xf' for the x-axis and 'yf' for the y-axis from the dataframe."
+  },
+  {
+    "id": "69",
+    "task__plot_description": " Plot Description:\n   Create a line plot visualizing three columns from the DataFrame. Each line should represent a different data series with unique line styles. Additionally, customize the plot with titles, labels for the x and y axes, a legend to distinguish between the series, and specific location settings for elements like the legend to enhance plot readability.\n",
+    "task__plot_style": " Plot Style Description:\n   Define distinct line styles for each data series to ensure visual distinction. Apply axes limits to focus the view on relevant data ranges. Enhance the readability by modifying text elements such as axis labels and titles to follow specific stylistic attributes like font styles. Additional graphical elements such as colors and legend configurations should be customized to improve visual clarity and aesthetics.",
+    "_task__plot_description_short": "Plot Description: Create a line plot for three DataFrame columns with unique line styles, titles, axis labels, and a legend. Customize the legend's location to enhance readability.",
+    "_task__plot_description_short_single": "Plot Description: Create a line plot for three DataFrame columns with unique line styles, titles, axis labels, and a legend for clarity."
+  },
+  {
+    "id": "70",
+    "task__plot_description": " Plot Description: Generate a vertical stack of two plots. The upper subplot should display the 'sine1' values against 't', including grid lines for better visualization and appropriate y-axis limits and labels to constrain and label the sine wave data. The lower subplot should perform a similar rendering for 'sine2' values versus 't', also with grid lines, y-axis limits, and detailed axis labeling including customized text properties.\n",
+    "task__plot_style": " Plot Style Description: Enhance the plots with grid lines for easier data reading. Customize the x-axis tick labels of the upper plot with a specific color, and modify the x-axis label of the lower plot using another distinct color and adjusted font size for emphasis and clarity. Both plots should maintain the same amplitude limits for direct comparison. Ensure the entire figure has a coherent title that ties the subplots together.",
+    "_task__plot_description_short": "Plot Description: Generate a vertical stack of two plots; the upper subplot displays 'sine1' vs 't' with grid lines, y-axis limits, and labels. The lower subplot shows 'sine2' vs 't' with similar grid lines, y-axis limits, and detailed axis labeling.",
+    "_task__plot_description_short_single": "Plot Description: Create a vertical stack of two subplots with grid lines, y-axis limits, and labels; the upper subplot shows 'sine1' vs 't', and the lower subplot shows 'sine2' vs 't'."
+  },
+  {
+    "id": "71",
+    "task__plot_description": " Plot Description: Create a plot that includes two lines representing 'y1' and 'y2' versus 'x'. The two lines should be distinctly styled to differentiate them easily. Attach a title to the graph for identification or descriptive purposes.",
+    "task__plot_style": " Plot Style Description: Style the lines with different colors and line patterns to visually segregate them - one line should be dashed and the other should also be dashed but with a different thickness. Color one line red and the other green, adjust line widths to enhance visibility. Set a clear and readable title on the top of the plot.",
+    "_task__plot_description_short": "Plot Description: Create a plot with two lines representing 'y1' and 'y2' versus 'x', each distinctly styled. Add a title for identification.",
+    "_task__plot_description_short_single": "Plot Description: Plot 'x' vs 'y1' and 'x' vs 'y2' with distinct styles and a title."
+  },
+  {
+    "id": "72",
+    "task__plot_description": " Plot Description: The task is to create a stacked bar chart to represent the losses by disaster category. Each bar in the chart will represent a category with different segments corresponding to the types of disasters. Additionally, a table will be included below the bar chart displaying the numeric data for each category and disaster type for clearer reference.",
+    "task__plot_style": " Plot Style Description: For visual clarity, the bars will be colored using a graduated color palette. The chart will include a title, labels on the y-axis with formatted values, and an axis adjustment to accommodate the table layout at the bottom. The figure should avoid displaying x-tick marks to maintain focus on the table and bar visualization.",
+    "_task__plot_description_short": "Plot Description: Create a stacked bar chart to represent losses by disaster category, with segments for each disaster type. Include a table below the chart displaying numeric data for each category and disaster type.",
+    "_task__plot_description_short_single": "Plot Description: Create a stacked bar chart to represent losses by disaster category with segments for disaster types, and include a table below displaying the numeric data."
+  },
+  {
+    "id": "73",
+    "task__plot_description": " Plot Description: The task will involve creating two types of plots in a single figure, stacked vertically. The first plot should be a standard Cartesian coordinate system plot displaying points defined by 'xs' and 'ys' values with annotations displaying these points' coordinates. The second plot should transform these points into a polar coordinate system, again plotting and annotating each point directly on the graph.\n",
+    "task__plot_style": " Plot Style Description: For both plots, points should be marked in red. Annotations should be offset slightly from each point to avoid overlapping with the point itself, ensuring the annotations are clearly readable. In the Cartesian plot, this offset can be to the right and slightly above each point. In the polar plot, annotations should be adjusted to be centered horizontally and aligned just below each point, using a different offset method tailored to polar coordinates.",
+    "_task__plot_description_short": "Plot Description: Create a vertically stacked figure with two plots: a Cartesian plot of 'xs' vs 'ys' with annotated coordinates, and a polar plot of the same points with annotations.",
+    "_task__plot_description_short_single": "Plot Description: Create a vertically stacked figure with a Cartesian plot of 'xs' vs 'ys' with annotations, and a polar plot of the same points with annotations."
+  },
+  {
+    "id": "74",
+    "task__plot_description": " Plot Description: Create a three-dimensional bar chart using the dataframe columns. Define a 3D subplot in a figure window. Plot bars at positional columns (xpos, ypos, zpos) with specified dimensions (dx, dy, dz), and sort them to optimize visibility.",
+    "task__plot_style": " Plot Style Description: Style the 3D bar chart to be visually appealing and engaging. Choose color shades and transparency levels to enhance clarity and depth perception, ensuring that the settings harmonize with the overall graphic presentation. Adjust labels, axes limits, and the perspective for a clear visualization of all dimensions.",
+    "_task__plot_description_short": "Plot Description: Create a 3D bar chart using dataframe columns, defining a 3D subplot in a figure window. Plot bars at (xpos, ypos, zpos) with dimensions (dx, dy, dz), sorting them for visibility.",
+    "_task__plot_description_short_single": "Plot Description: Create a 3D bar chart using dataframe columns for positions (xpos, ypos, zpos) and dimensions (dx, dy, dz) in a 3D subplot, sorted for visibility."
+  },
+  {
+    "id": "75",
+    "task__plot_description": " Plot Description: Construct a 3D wireframe plot from the reshaped arrays derived from the DataFrame's columns, representing spatial coordinates. The plot must clearly represent the variations and structure of the data in three dimensions. Include dynamic features in the plotting such as rotating the view angle during display for better interpretation of the structure in 3D space.\n",
+    "task__plot_style": " Plot Style Description: The 3D plot should use a wireframe format to distinctly showcase the grid lines illustrating the coordinates' intersections. Enhance visual clarity by adjusting the grid stride and maintaining a clean, straightforward style, favoring readability and comprehension of complex 3D structures. The axes should be properly labeled to indicate the range of each dimension.",
+    "_task__plot_description_short": "Plot Description: Construct a 3D wireframe plot from reshaped arrays derived from the DataFrame's columns, representing spatial coordinates. Include dynamic features like rotating the view angle during display for better interpretation of the 3D structure.",
+    "_task__plot_description_short_single": "Plot Description: Create a 3D wireframe plot from reshaped DataFrame columns as spatial coordinates, with dynamic view angle rotation for better 3D structure interpretation."
+  },
+  {
+    "id": "76",
+    "task__plot_description": " Plot Description: The plot to be generated should be a three-dimensional visualization capturing the spatial distribution of data points described in the dataframe. Implement a 3D triangular surface plot where the plot surface will represent variations across three axes ('x', 'y', 'z') derived from the dataframe values, showing the topology or the geometrical shape implied by the data points' relations.\n",
+    "task__plot_style": " Plot Style Description: The plot should be styled to highlight its three-dimensional aspects effectively. Use appropriate grid-lines to enhance visibility of depth and dimensionality. The plotting style should utilize a solid fill color to better represent the surface, and lighting or shading techniques to enhance the visualization of the surface's topology or contours.",
+    "_task__plot_description_short": "Plot Description: Generate a 3D triangular surface plot to visualize the spatial distribution of data points in the dataframe. The plot should represent variations across 'x', 'y', and 'z' axes, showing the topology implied by the data points' relations.",
+    "_task__plot_description_short_single": "Plot Description: Create a 3D triangular surface plot using dataframe columns 'x', 'y', and 'z' to visualize spatial distribution and topology."
+  },
+  {
+    "id": "77",
+    "task__plot_description": " Plot Description: Construct a three-dimensional wireframe plot using the reshaped data matrices. The plotted object will depict relationships in spatial data across the X, Y, and Z dimensions. The plot should portray the geometric surface or shape represented by the matrix-valued coordinates, and the graphic should provide a clear and detailed view of the underlying structure.\n",
+    "task__plot_style": " Plot Style Description: The graphical representation should be styled as a wireframe, with specified intervals (strides) between the lines to avoid an overcrowded visual. This refined spacing allows for an intuitive, aesthetic, and clear visualization of the three-dimensional surface contours and gradients, while ensuring the plot remains structured and easy to interpret.",
+    "_task__plot_description_short": "Plot Description: Construct a 3D wireframe plot using reshaped data matrices to depict spatial relationships across X, Y, and Z dimensions. The plot should clearly portray the geometric surface or shape represented by the matrix-valued coordinates.",
+    "_task__plot_description_short_single": "Plot Description: Create a 3D wireframe plot using reshaped data matrices to depict spatial relationships across X, Y, and Z dimensions, clearly showing the geometric surface or shape."
+  },
+  {
+    "id": "78",
+    "task__plot_description": " Plot Description: Create two separate 3D plots within a single figure. Each plot visualizes data from the dataframe in a wireframe format. The first plot will emphasize variations by fixing the stride along the x-axis and freeing up the y-axis. The second plot inverts this approach by fixing the stride along the y-axis and freeing up the x-axis. Each subplot should have a title reflecting their respective striding technique.\n",
+    "task__plot_style": " Plot Style Description: Configure the plots to have clearly readable titles that describe the striding configuration. Choose a layout that ensures neither plot overlaps the other, maintaining good visibility and differentiation between the two plots. Adjust aesthetic elements such as figure size and layout to enhance the visual appeal and clarity of the plot presentation.",
+    "_task__plot_description_short": "Plot Description: Create a figure with two 3D wireframe subplots from the dataframe. The first subplot fixes the stride along the x-axis, and the second fixes the stride along the y-axis, each with appropriate titles.",
+    "_task__plot_description_short_single": "Plot Description: Create a figure with two 3D wireframe subplots from the dataframe, one with fixed x-axis stride and free y-axis, and the other with fixed y-axis stride and free x-axis, each titled accordingly."
+  },
+  {
+    "id": "79",
+    "task__plot_description": " Plot Description: Create a pie chart representing the proportions of various ingredients based on their quantities. Each slice of the pie should be labeled with both the percentage and the gram amount. Additionally, set up annotations so that each slice’s data is easily readable for clarity.\n",
+    "task__plot_style": " Plot Style Description: Customize the plot with a title and ensure readability by adjusting text properties such as size and weight. Place a legend outside the pie chart, aligning it to the left but centered vertically. Use different colors for each ingredient to differentiate them clearly in the chart.",
+    "_task__plot_description_short": "Plot Description: Create a pie chart of ingredient quantities, labeling each slice with percentage and gram amount. Ensure annotations are clear for readability.",
+    "_task__plot_description_short_single": "Plot Description: Create a pie chart of ingredient quantities with slices labeled by percentage and grams, ensuring clear readability through annotations."
+  },
+  {
+    "id": "80",
+    "task__plot_description": " Plot Description: Create a pie chart that visually represents the proportions of different categories provided in the DataFrame. Each slice should be labeled and its size should reflect the corresponding value in the 'sizes' column. Use the 'explode' values to slightly detach the slices for better visibility. Display percentage values within each slice of the pie for a clear quantitative understanding.",
+    "task__plot_style": " Plot Style Description: The pie chart should be displayed as a perfect circle, ensuring equal aspect ratio. Additional enhancements include a shadow effect for depth perception and starting at a specific angle to orient the segments effectively. Labels and percentages should be clearly visible against a colorful background representing each category distinctively.",
+    "_task__plot_description_short": "Plot Description: Create a labeled pie chart from the 'sizes' column, using 'explode' to detach slices for visibility. Display percentage values within each slice.",
+    "_task__plot_description_short_single": "Plot Description: Create a pie chart from the DataFrame with slices labeled and sized by 'sizes', using 'explode' to detach slices, and display percentage values within each slice."
+  },
+  {
+    "id": "81",
+    "task__plot_description": " Plot Description: Construct a polar plot where the line connects points defined by the 'theta' and 'r' data from the dataframe. Configure radial limits and ticks to enhance the readability and presentation of the plot. Set the position of radial labels to improve clarity and incorporate grid lines to aid in data interpretation.\n",
+    "task__plot_style": " Plot Style Description: Customize the plot's title positioning to optimize space usage and aesthetic appeal. Employ a clean and structured layout for the visualization, ensuring that numeric labels are well-positioned and the overall appearance is informative and visually pleasing.",
+    "_task__plot_description_short": "Plot Description: Construct a polar plot connecting points defined by 'theta' and 'r' from the dataframe, configuring radial limits and ticks for readability. Adjust radial label positions and incorporate grid lines for clarity and data interpretation.",
+    "_task__plot_description_short_single": "Plot Description: Create a polar plot connecting 'theta' and 'r' from the dataframe, set radial limits and ticks, adjust radial label positions, and add grid lines."
+  },
+  {
+    "id": "82",
+    "task__plot_description": " Plot Description:\nThe task involves creating a polar plot from the DataFrame. The plot should incorporate two lines:\n- One line representing the relationship between 'theta' and 'r'.\n- Another line representing the relationship between 'theta_half' and 'r', to visually compare how 'r' changes with 'theta' and its half value.\nBoth lines should be distinctly styled and labeled appropriately within the plot.\n",
+    "task__plot_style": " Plot Style Description:\nThe plot should have a styled background specific for polar graphs, grid lines with a distinct color and style, and customized tick labels to enhance readability. Line styles should differ between the two series plotted (e.g., solid vs dashed lines), with colors and line widths that ensure they are distinguishable from each other. A legend is necessary to identify the plotted series. The overall size and aspect ratio of the plot should be set to clearly display all data without clutter.",
+    "_task__plot_description_short": "Plot Description: Create a polar plot with two lines: one for 'theta' vs 'r' and another for 'theta_half' vs 'r'. Ensure both lines are distinctly styled and labeled.",
+    "_task__plot_description_short_single": "Plot Description: Create a polar plot with two lines, one for 'theta' vs 'r' and another for 'theta_half' vs 'r', each distinctly styled and labeled."
+  },
+  {
+    "id": "83",
+    "task__plot_description": " Plot Description: Create a polar scatter plot. Use the 'theta' values for the angular coordinates and 'r' values for the radial distance. The size of each scatter point is determined by the ‘area’ values. The color of each point is based on the ‘colors’ column, using a predetermined colormap to encode numeric values into colors. Adjust the transparency of the points to ensure readability where points overlap.\n",
+    "task__plot_style": " Plot Style Description: Apply a colormap with a hue-saturation-value (HSV) color model to represent different values in a visually distinct manner. Set the transparency of each scatter point to 75% to balance visibility through overlapping points. Customize the plot to include gridlines and labels for various angles and radii to enhance readability and interpretability of the plot.\n",
+    "_task__plot_description_short": "Plot Description: Create a polar scatter plot using 'theta' for angular coordinates, 'r' for radial distance, 'area' for point size, and 'colors' for point color with a colormap. Adjust point transparency for readability where points overlap.",
+    "_task__plot_description_short_single": "Plot Description: Create a polar scatter plot using 'theta' for angles, 'r' for radial distances, 'area' for point sizes, 'colors' for point colors with a colormap, and adjust transparency for readability."
+  },
+  {
+    "id": "84",
+    "task__plot_description": " Plot Description: The code should generate a grid of four plots (2 by 2). The top row should contain the plots 'misaligned1' and 'aligned1', each with their own x and y-axes. The bottom row should contain 'misaligned2' and 'aligned2'. The 'misaligned' plots will have y-labels added without alignment adjustments, whereas 'aligned' plots will have y-labels that are aligned across the second column.\n",
+    "task__plot_style": " Plot Style Description: Each ylabel should be enclosed in a yellow box with a specified padding and partial transparency. Both columns should have individual settings for y-axis limits where applicable and overall improvement in spacing and alignment of y-labels on the second column against misaligned labels on the first column.",
+    "_task__plot_description_short": "Plot Description: Generate a 2x2 grid with 'misaligned1' and 'aligned1' on the top row, and 'misaligned2' and 'aligned2' on the bottom row. 'Misaligned' plots have y-labels without alignment adjustments, while 'aligned' plots have y-labels aligned across the second column.",
+    "_task__plot_description_short_single": "Plot Description: Generate a 2x2 grid with 'misaligned1' and 'aligned1' on the top row, 'misaligned2' and 'aligned2' on the bottom row, where 'misaligned' plots have y-labels without alignment adjustments and 'aligned' plots have y-labels aligned across the second column."
+  },
+  {
+    "id": "85",
+    "task__plot_description": " Plot description: Create a line plot using the 'x' column for the x-axis and the 'y' column for the y-axis, displaying a fluctuating waveform. The x-axis limits should be set from 0 to 10, and the y-axis limits should be set from -1 to 1. Include annotations on the plot to denote specific data points and their corresponding display pixel values on the plot. Use transformations to accurately position these annotations based on both data points and derived display coordinates.\n",
+    "task__plot_style": " Plot style description: Customize the annotations with boxes and arrows for clear visibility. Set a rounded box style for textual annotations and configure arrow styles to clearly point from the text to the corresponding data point. Adjust text placement relative to the data points using offset coordinates. Utilize style settings to enhance readability and interpretability of the annotations, such as adjusting the background color of the annotation boxes and setting specific connection styles for arrows.",
+    "_task__plot_description_short": "Plot Description: Create a line plot using the 'x' column for the x-axis (0 to 10) and the 'y' column for the y-axis (-1 to 1), displaying a fluctuating waveform. Include annotations to denote specific data points and their display pixel values, using transformations for accurate positioning.",
+    "_task__plot_description_short_single": "Plot Description: Create a line plot using 'x' for the x-axis and 'y' for the y-axis, with x-axis limits from 0 to 10, y-axis limits from -1 to 1, and annotations for specific data points with display pixel values using transformations."
+  },
+  {
+    "id": "86",
+    "task__plot_description": " Plot Description: Create a line plot using the two columns from the DataFrame. Column 't' will be set as the x-axis, and column 's' will be set as the y-axis. Highlight a specific point on this plot, referred to as 'local max', using an annotation with an arrow pointing to it.",
+    "task__plot_style": " Plot Style Description: Style the line plot with a specific line width. Set the y-axis limits to enhance the visibility of the plot's features. The plot should contain labels for readability and employ arrows for annotations effectively to clarify key observations in the data.",
+    "_task__plot_description_short": "Plot Description: Create a line plot with 't' as the x-axis and 's' as the y-axis. Highlight and annotate the 'local max' point with an arrow.",
+    "_task__plot_description_short_single": "Plot Description: Create a line plot with 't' on the x-axis and 's' on the y-axis, and annotate the 'local max' point with an arrow."
+  },
+  {
+    "id": "87",
+    "task__plot_description": " Plot Description: Create a line plot using the data from the DataFrame's 'Data' column. Plotting should result in a visualization that reflects the trends and fluctuations in the data over its index.",
+    "task__plot_style": " Plot Style Description: Format the y-axis to display values as monetary amounts in US dollars, ensuring each tick label on the y-axis shows values with two decimal places preceded by a dollar sign. Customize the y-axis tick labels to hide labels on the left and display labels on the right in green color. Adjust visualization settings for clearer understanding and display of data trends.",
+    "_task__plot_description_short": "Plot Description: Create a line plot using the DataFrame's 'Data' column. The plot should visualize trends and fluctuations over the index.",
+    "_task__plot_description_short_single": "Plot Description: Create a line plot of the DataFrame's 'Data' column against its index."
+  },
+  {
+    "id": "88",
+    "task__plot_description": " Plot Description: Create a scatter plot of the dataframe using the two columns. Each column represents one axis: one for the horizontal axis (x-axis) and the other for the vertical axis (y-axis). The plot should depict individual data points.",
+    "task__plot_style": " Plot Style Description: The data points should be represented as red circles on the plot. Emphasize the visibility and distinction of each point against the plot grid. The axes should be clearly labeled based on the dataframe's column names, and the range of each axis should automatically adjust to accommodate all data points.",
+    "_task__plot_description_short": "Plot Description: Create a scatter plot of the dataframe using two columns, one for the x-axis and the other for the y-axis, to depict individual data points.",
+    "_task__plot_description_short_single": "Plot Description: Create a scatter plot of the dataframe using one column for the x-axis and another for the y-axis to depict individual data points."
+  },
+  {
+    "id": "89",
+    "task__plot_description": " Plot Description: Generate a plot using data from the DataFrame with time on the horizontal axis and voltage on the vertical axis. Include a title using mathematical notation, and superimpose two additional text elements containing mathematical expressions at specified positions on the plot. Label the axes to indicate the units of measurement for each.",
+    "task__plot_style": " Plot Style Description: Style the plot by adjusting the font size of the title and text elements to enhance readability and aesthetic appeal. Choose a line style and width that clearly depicts the time-voltage relationship. Ensure that axis labels are appropriately detailed to reflect the units of measurement. Add grid marks or background style if necessary to improve the visual distinction of data points.",
+    "_task__plot_description_short": "Plot Description: Generate a plot with time on the x-axis and voltage on the y-axis, including a title with mathematical notation. Add two text elements with mathematical expressions at specified positions and label the axes with units.",
+    "_task__plot_description_short_single": "Plot Description: Plot time vs. voltage with axis labels, a title in math notation, and two math expressions at specified positions."
+  },
+  {
+    "id": "90",
+    "task__plot_description": " Plot description: Create a simple line plot to visualize the data in the DataFrame. Plot the integer values against their corresponding index positions on the x-axis. Include appropriate labels for the y-axis to represent the data.\n",
+    "task__plot_style": " Plot style description: Style the plot with a clear and minimalist design. Use a solid blue line for the data points connecting them linearly. Ensure the axes are appropriately scaled to display all data points clearly. The plot should have labeled axes where the y-axis indicates the magnitude of the values presented in the DataFrame.",
+    "_task__plot_description_short": "Plot Description: Create a line plot of the DataFrame with integer values on the y-axis and index positions on the x-axis. Label the y-axis appropriately to represent the data.",
+    "_task__plot_description_short_single": "Plot Description: Create a line plot of the DataFrame with index positions on the x-axis and integer values on the y-axis, including y-axis labels."
+  },
+  {
+    "id": "91",
+    "task__plot_description": " Plot Description: Create a histogram based on the 'Smarts' column of the dataframe. Configure the histogram to divide the data into 50 bins, display the frequency as a probability density, and color the bars in green with a specified level of opacity. Add labels for both axes, a title for the graph, and an annotation within the plot area to indicate the mean and standard deviation. Set the limits for the x-axis and y-axis to frame the data effectively and enable grid lines for better readability.\n",
+    "task__plot_style": " Plot Style Description: The style of the histogram should be clear and informative. Use a green color for the bars with a transparency setting to allow for overlay visibility. Clearly mark the axis labels and graph title with legible fonts. Annotations should be placed within the graph to provide statistical information at a glance. The x-axis and y-axis scales should be appropriately set to encompass all data points while maintaining a clean and uncluttered appearance. Grid lines should be subtle but useful for assessing the values represented in the histogram.",
+    "_task__plot_description_short": "Plot Description: Create a green histogram of the 'Smarts' column with 50 bins, showing probability density and 50% opacity. Add axis labels, a title, mean and standard deviation annotation, set x and y limits, and enable grid lines.",
+    "_task__plot_description_short_single": "Plot Description: Create a green histogram of the 'Smarts' column with 50 bins, probability density, axis labels, title, mean and std annotation, x and y limits, and grid lines."
+  },
+  {
+    "id": "92",
+    "task__plot_description": " Plot Description: Draw three separate series on a single chart from the dataframe. The first series should be a simple line graph relating the time ('t') to itself with a specific line style. The second series should plot time against 't_squared' using a distinct marker. The third series should plot time against 't_cubed' with another unique marker. The aim is to differentiate the growth between these variables visually.",
+    "task__plot_style": " Plot Style Description: Style the plot by defining specific markers and line types for each series to clearly distinguish them. The first series uses a dashed line, the second series uses a square marker for each data point, and the third uses a triangle marker. Choose different colors for each series to improve clarity and visual appeal. The axes should be labeled appropriately to reflect the quantities being displayed.",
+    "_task__plot_description_short": "Plot Description: Draw three series on a single chart from the dataframe: 't' vs 't' as a line graph, 't' vs 't_squared' with a distinct marker, and 't' vs 't_cubed' with another unique marker. The aim is to visually differentiate the growth between these variables.",
+    "_task__plot_description_short_single": "Plot Description: Plot 't' vs 't' as a line, 't' vs 't_squared' with one marker, and 't' vs 't_cubed' with another marker on a single chart to compare their growth."
+  },
+  {
+    "id": "93",
+    "task__plot_description": " Plot description: The task involves generating a rectangular plot area with a specific rectangle drawn without fill. The rectangle's dimensions are defined relative to the figure's axes. Text elements, stored in the DataFrame, are plotted within this rectangle, positioned at coordinates defined by 'x' and 'y'. Each text element has custom properties for alignment, rotation, color, and font size applied to it, controlled by corresponding DataFrame columns. \n",
+    "task__plot_style": " Plot style description: The plot background is transparent, with no axis visible. Text styling within the plot is controlled by data-derived attributes such as alignment (vertical and horizontal), font size, text rotation, and color, leading to a customized and informative graphical representation.",
+    "_task__plot_description_short": "Plot Description: Generate a rectangular plot area with a specific rectangle drawn without fill, dimensions defined relative to the figure's axes. Plot text elements from the DataFrame within this rectangle at 'x' and 'y' coordinates, with custom properties for alignment, rotation, color, and font size from corresponding DataFrame columns.",
+    "_task__plot_description_short_single": "Plot Description: Generate a rectangular plot area with an unfilled rectangle, and plot text elements from the DataFrame at specified 'x' and 'y' coordinates with custom alignment, rotation, color, and font size."
+  },
+  {
+    "id": "94",
+    "task__plot_description": " Plot Description: The task involves creating two plots. The first plot will illustrate various box styles by positioning them vertically and aligning in the center. Each box will display a label with its respective style. The second plot will showcase arrows pointing to circles, both located based on their given position. Labels adjacent to arrows will indicate the arrow style.\n",
+    "task__plot_style": " Plot Style Description: Customize figure size and resolution to enhance clarity and visual appeal. Text labels in the first plot will be placed within boxes tailored stylistically according to the dataframe's entries. In the second plot, arrows with distinct styles will point towards circles, visually representing the data pertaining to arrow types. Both plots will avoid displaying axes scales to maintain focus on the graphical elements, not on quantitative scales.",
+    "_task__plot_description_short": "Plot Description: Create a vertical, center-aligned plot of box styles with labels. Create a plot of arrows pointing to circles with labels indicating arrow styles.",
+    "_task__plot_description_short_single": "Plot Description: Create two plots: one with vertically centered box styles labeled with their styles, and another with arrows pointing to circles, labeled with their arrow styles."
+  },
+  {
+    "id": "95",
+    "task__plot_description": " Plot Description: The plot consists of two main components: line plots and filled areas. The line plots will display the values from 'y1' and 'y2' against 'x'. Additionally, the area between the 'y1' and 'y2' lines will be filled. This filling will vary in color depending on whether 'y2' is above 'y1' or not.\n",
+    "task__plot_style": " Plot Style Description: The lines for 'y1' and 'y2' should be plotted in black color. Areas where the 'y2' values are greater than 'y1' will be filled with a yellow color, while areas where 'y2' is less than or equal to 'y1' will be filled with a red color. The filling will be translucent, allowing for the underlying grid or any other lines to be partially visible. The plot will have a title indicating its purpose or content.",
+    "_task__plot_description_short": "Plot Description: Create line plots for 'y1' and 'y2' against 'x', and fill the area between them. The fill color should change based on whether 'y2' is above 'y1'.",
+    "_task__plot_description_short_single": "Plot Description: Create line plots for 'y1' and 'y2' against 'x', and fill the area between them with different colors based on whether 'y2' is above 'y1'."
+  },
+  {
+    "id": "96",
+    "task__plot_description": " Plot Description:\nCreate a line plot for each series in the dataframe on a common axis. Each series should be distinctly colored and included in the plot. Include a legend to differentiate among the plotted series, displaying the legend in an optimized position that accommodates all entries neatly without overlapping with data.\n",
+    "task__plot_style": " Plot Style Description:\nEnhance the visual appeal and readability of the plot by applying styles. The legend should be expanded across the top of the plot to include all series names and should feature a semi-transparent background. Additionally, add soft shadows to the legend to give the plot a more refined look. Adjust visual styling details such as line color and width to ensure clarity and aesthetics.",
+    "_task__plot_description_short": "Plot Description: Create a line plot for each series in the dataframe on a common axis with distinct colors. Include a legend in an optimized position to differentiate the series without overlapping data.",
+    "_task__plot_description_short_single": "Plot Description: Create a line plot for each series in the dataframe with distinct colors and an optimized legend."
+  },
+  {
+    "id": "97",
+    "task__plot_description": " Plot Description: Create a plot with four subplots arranged in a 2x2 grid. Each subplot should contain a line plot of 'y' versus 'x'. Customize each subplot's axes visibility and tick positions differently: the first with only the left spine visible, the second with none visible, the third with both the left and bottom spines visible, and the fourth with only the bottom spine visible.",
+    "task__plot_style": " Plot Style Description: Adjust the visibility and positioning of the spines and ticks for each subplot according to the specified customization. Use outward positioning for visible spines and ensure that ticks are only shown where spines are visible. Style the line plot with a consistent color and line type across all subplots.",
+    "_task__plot_description_short": "Plot Description: Create a 2x2 grid of subplots with line plots of 'y' vs 'x'. Customize axes: first with only left spine, second with no spines, third with left and bottom spines, and fourth with only bottom spine.",
+    "_task__plot_description_short_single": "Plot Description: Create a 2x2 grid of subplots with line plots of 'y' vs 'x', customizing axes visibility: first (left spine), second (none), third (left and bottom spines), fourth (bottom spine)."
+  },
+  {
+    "id": "98",
+    "task__plot_description": " Plot Description: Generate four line plots, each visualizing the same dataset 'data' from the DataFrame. All plots should be displayed within a single figure organized in a 2x2 grid, where each subplot shows the same data line but is individually titled (Plot 1, Plot 2, Plot 3, Plot 4, respectively). The x and y axes should be shared among all subplots to maintain consistency in data comparison.\n",
+    "task__plot_style": " Plot Style Description: Display each plot with a line style that clearly denotes changes in data values over row indices. Use a standard color for visibility—preferably a clear contrast like blue. Each plot should include grid lines for easier readability of the data points, axis labels could be optional given the shared axis feature, and each plot must have a title showing its unique identifier.",
+    "_task__plot_description_short": "Plot Description: Generate four line plots from the DataFrame 'data' in a single figure organized in a 2x2 grid, each titled (Plot 1, Plot 2, Plot 3, Plot 4). Ensure x and y axes are shared among all subplots for consistent data comparison.",
+    "_task__plot_description_short_single": "Plot Description: Generate a 2x2 grid of subplots from DataFrame 'data', each with the same line plot but individually titled (Plot 1, Plot 2, Plot 3, Plot 4), sharing x and y axes."
+  },
+  {
+    "id": "99",
+    "task__plot_description": " Plot Description: Create a histogram to visualize the distribution of the 'x' values across a specified number of bins. Overlap this histogram with a text box that displays the unique values of 'mu', 'median', and 'sigma' from the DataFrame.\n",
+    "task__plot_style": " Plot Style Description: The histogram should have a specific bin count to properly display the data distribution. The text box containing the statistical values should be positioned in the upper left corner of the plot, and it should have rounded corners, a background color to increase readability, and a moderate level of transparency. The font size should be set to ensure readability without overshadowing the plot.",
+    "_task__plot_description_short": "Plot Description: Create a histogram of 'x' values with specified bins. Overlay a text box showing unique 'mu', 'median', and 'sigma' values from the DataFrame.",
+    "_task__plot_description_short_single": "Plot Description: Create a histogram of 'x' values with specified bins, overlaying a text box showing unique 'mu', 'median', and 'sigma' values."
+  }
+]
