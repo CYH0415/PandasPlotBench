@@ -8,9 +8,7 @@ benchmark_types: ["vis", "task"] # Options: "vis", "task", "codebert"
 plotting_lib: "matplotlib" # "matplotlib", "seaborn", "plotly", "lets-plot" (does not work)
 data_descriptor: "head" # data descriptor. Options: "pycharm", "datalore", "lida", "head", "describe", "empty"
 model_plot_gen:
-  names: ["openrouter/qwen/qwen3-4b:free"]  # 使用OpenRouter的Qwen3-4B免费模型
-  # 其他OpenRouter模型选项:
-  # names: ["openrouter/qwen/qwen-2.5-coder-32b-instruct"]
+  names: ["custom/qwen2.5-coder-7b-instruct"]  # 使用自定义API的Qwen2.5-Coder-7B模型
   parameters: # List of additional model parameters.
     temperature: 0.0
 model_judge:
