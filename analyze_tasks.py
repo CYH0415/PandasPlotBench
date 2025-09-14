@@ -34,7 +34,11 @@ def analyze_task_length(dataset: pd.DataFrame):
 
 
 if __name__ == "__main__":
-    dataset = load_dataset("JetBrains-Research/PandasPlotBench", split="test")
-    dataset_df = dataset.to_pandas()
+    # Load dataset from local parquet file
+    from pathlib import Path
+    import pandas as pd
+    
+    dataset_path = Path(__file__).parent / "dataset" / "dataset.parquet"
+    dataset_df = pd.read_parquet(dataset_path)
 
     analyze_task_length(dataset_df)

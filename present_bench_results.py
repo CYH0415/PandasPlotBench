@@ -60,7 +60,14 @@ print(f"Using results file: {response_file}")
 
 # 加载数据集获取ground truth
 print("Loading dataset for ground truth images...")
-dataset = load_dataset("JetBrains-Research/PandasPlotBench", split="test")
+# Load dataset from local parquet file
+from pathlib import Path
+import pandas as pd
+from datasets import Dataset
+
+dataset_path = Path(__file__).parent / "dataset" / "dataset.parquet"
+dataset_df = pd.read_parquet(dataset_path)
+dataset = Dataset.from_pandas(dataset_df)
 
 # 创建ID到数据集项的映射
 dataset_dict = {item['id']: item for item in dataset}
